@@ -12,25 +12,14 @@ const LeftSidebar = () => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <Paper elevation={1} sx={{ minHeight: "100vh" }}>
-      <SidebarItem
-        expanded={expanded === "panel1"}
-        handleChange={handleChange("panel1")}
-        text="Dashboard"
-        items={[{ text: "Public" }]}
-      />
-      <SidebarItem
-        expanded={expanded === "panel2"}
-        handleChange={handleChange("panel2")}
-        text="Clinics"
-      />
+    <Paper elevation={1} sx={{ minHeight: "100vh !important" }}>
       {data.map((item, index) => (
         <SidebarItem
           expanded={expanded === item.slug}
           handleChange={handleChange(item.slug)}
           text={item.text}
           key={index + 4645}
-          icon={item.icon}
+          Icon={item.icon}
         />
       ))}
     </Paper>

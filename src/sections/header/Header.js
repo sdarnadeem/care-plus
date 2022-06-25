@@ -2,6 +2,7 @@ import React from "react";
 
 import { Grid, Paper, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 
 import c from "./Header.module.css";
 import HeaderProfile from "../../components/headerProfile/HeaderProfile";
@@ -17,6 +18,7 @@ const Header = () => {
               src="./images/carePlusLogo.svg"
               alt="logo"
             />
+            <ArrowCircleLeftIcon />
           </Grid>
           <Grid item lg={7}>
             <TextField

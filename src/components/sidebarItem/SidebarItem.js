@@ -4,6 +4,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Stack } from "@mui/material";
 
 import c from "./SidebarItem.module.css";
 
@@ -23,13 +24,16 @@ export default function SidebarItem({
           id="panel1bh-header"
           sx={{ height: "48px !important" }}
         >
-          <Icon />
-          <Typography
-            sx={{ width: "60%", flexShrink: 0 }}
-            className={expanded && c.active}
-          >
-            {text}
-          </Typography>
+          <Stack direction="row" alignItems="center" spacing={2}>
+            <Icon />
+
+            <Typography
+              sx={{ width: "100%", flexShrink: 0 }}
+              className={expanded && c.active}
+            >
+              {text}
+            </Typography>
+          </Stack>
         </AccordionSummary>
         {items && items.length > 0 && (
           <AccordionDetails>
