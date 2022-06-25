@@ -8,7 +8,6 @@ import Middle from "../../components/middle/Middle";
 const Dashboard = () => {
   const [showSidebar, setShowSidebar] = React.useState(false);
   const handleSidebar = () => {
-    console.log(showSidebar);
     setShowSidebar((prev) => !prev);
   };
   return (

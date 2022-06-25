@@ -1,7 +1,17 @@
-.active {
-  color: blue;
-}
-
 .hide {
   display: none;
+}
+
+.expanded {
+  background: rgb(13 110 253 / 0.12);
+  color: #008cff;
+}
+.expanded:hover {
+  background: rgb(13 110 253 / 0.12);
+  color: #008cff;
+}
+
+.item:hover {
+  background: rgb(13 110 253 / 0.12);
+  color: #008cff;
 }

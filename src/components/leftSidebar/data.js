@@ -23,6 +23,20 @@ const content = [
     icon: BiotechIcon,
     text: "Clinics",
     slug: "clinics",
+    items: [
+      {
+        text: "All Clinics",
+        slug: "all-clinics",
+      },
+      {
+        text: "Online Clinics",
+        slug: "online-clinics",
+      },
+      {
+        text: "Block Clinics",
+        slug: "block-clinics",
+      },
+    ],
   },
   {
     icon: GroupIcon,
@@ -33,16 +47,50 @@ const content = [
     icon: AttachMoneyIcon,
     text: "Fees",
     slug: "fees",
+    items: [
+      {
+        text: "Clinics",
+        slug: "clinics",
+      },
+      {
+        text: "Doctors",
+        slug: "doctors",
+      },
+    ],
   },
   {
     icon: PaymentIcon,
     text: "Payments",
     slug: "payments",
+    items: [
+      {
+        text: "Transactions",
+        slug: "clinics",
+      },
+      {
+        text: "Admin Payment Details",
+        slug: "doctors",
+      },
+      {
+        text: "Payment Gateway Setting",
+        slug: "doctors",
+      },
+    ],
   },
   {
     icon: CoPresentIcon,
     text: "Commission",
     slug: "commission",
+    items: [
+      {
+        text: "Clinic",
+        slug: "clinics",
+      },
+      {
+        text: "Doctor",
+        slug: "doctors",
+      },
+    ],
   },
   {
     icon: AccountBoxIcon,

@@ -29,6 +29,7 @@ const LeftSidebar = ({ handleSidebar }) => {
           key={index + 4645}
           Icon={item.icon}
           showSidebar={showSidebar}
+          items={item.items}
         />
       ))}
 

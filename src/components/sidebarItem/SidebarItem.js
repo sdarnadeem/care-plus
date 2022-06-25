@@ -1,10 +1,14 @@
 import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
+
+import {
+  Stack,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Stack } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import c from "./SidebarItem.module.css";
 
@@ -16,15 +20,19 @@ export default function SidebarItem({
   Icon,
   showSidebar,
 }) {
-  const typographyClass = `${expanded && c.active} ${!showSidebar && c.hide}`;
+  const typographyClass = `${!showSidebar && c.hide}`;
   return (
     <div>
-      <Accordion expanded={expanded} onChange={handleChange}>
+      <Accordion expanded={expanded} onChange={handleChange} disableGutters>
         <AccordionSummary
-          expandIcon={items && items.length > 0 && <ExpandMoreIcon />}
+          expandIcon={
+            items && showSidebar && items.length > 0 && <ExpandMoreIcon />
+          }
           aria-controls="panel1bh-content"
           id="panel1bh-header"
-          sx={{ height: "48px !important" }}
+          style={{ height: "48px !important" }}
+          disableGutters
+          className={expanded && c.expanded}
         >
           <Stack direction="row" alignItems="center" spacing={2}>
             <Icon />
@@ -39,11 +47,30 @@ export default function SidebarItem({
         </AccordionSummary>
         {items && items.length > 0 && (
           <AccordionDetails>
-            {items.map((item, index) => (
-              <Typography variant="caption" key={index + 10565}>
-                {item.text}
-              </Typography>
-            ))}
+            <Stack
+              direction="column"
+              alignItems="left"
+              sx={{ paddingLeft: "20px" }}
+            >
+              {items.map((item, index) => (
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  spacing={1}
+                  className={c.item}
+                  padding={1}
+                >
+                  <ArrowForwardIcon fontSize="small" />
+                  <Typography
+                    className={!showSidebar && c.hide}
+                    variant="body2"
+                    key={index + 10565}
+                  >
+                    {item.text}
+                  </Typography>
+                </Stack>
+              ))}
+            </Stack>
           </AccordionDetails>
         )}
       </Accordion>
