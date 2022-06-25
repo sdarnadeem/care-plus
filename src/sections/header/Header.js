@@ -4,12 +4,13 @@ import { Grid, Paper, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import c from "./Header.module.css";
+import HeaderProfile from "../../components/headerProfile/HeaderProfile";
 
 const Header = () => {
   return (
     <header>
       <Paper elevation={1}>
-        <Grid container>
+        <Grid container alignItems="center">
           <Grid item lg={2}>
             <img
               className={c.image}
@@ -20,7 +21,7 @@ const Header = () => {
           <Grid item lg={7}>
             <TextField
               id="input-with-icon-textfield"
-              label="TextField"
+              placeholder="Type to search"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -28,11 +29,12 @@ const Header = () => {
                   </InputAdornment>
                 ),
               }}
-              variant="standard"
+              variant="outlined"
+              size="small"
             />
           </Grid>
           <Grid item lg={3}>
-            Notifications
+            <HeaderProfile />
           </Grid>
         </Grid>
       </Paper>
