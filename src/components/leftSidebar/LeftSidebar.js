@@ -30,6 +30,7 @@ const LeftSidebar = ({ handleSidebar }) => {
           Icon={item.icon}
           showSidebar={showSidebar}
           items={item.items}
+          slug={item.slug}
         />
       ))}
 

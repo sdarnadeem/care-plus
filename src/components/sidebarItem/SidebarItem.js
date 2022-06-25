@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   Stack,
@@ -10,6 +11,8 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+import { useSearchParams } from "react-router-dom";
+
 import c from "./SidebarItem.module.css";
 
 export default function SidebarItem({
@@ -19,8 +22,37 @@ export default function SidebarItem({
   items,
   Icon,
   showSidebar,
+  slug,
 }) {
+  const [searchParams] = useSearchParams();
+
+  const tab = searchParams.get("tab");
+  const subTab = searchParams.get("sub-tab");
+
+  console.log(tab, slug, tab === slug, expanded);
+
+  const navigate = useNavigate();
+
   const typographyClass = `${!showSidebar && c.hide}`;
+  const summaryClass = `${c.item} ${tab === slug && c.expanded} `;
+  const subTabClass = (slug) => {
+    if (slug === subTab) {
+      return `${c.item} ${c.expanded}`;
+    } else {
+      return `${c.item}`;
+    }
+  };
+
+  const handleItemClick = () => {
+    if (slug === "logout") {
+      return navigate("/login", { replace: true });
+    }
+    navigate(`?tab=${slug}`);
+  };
+
+  const handleSubitemClick = (subSlug) => {
+    navigate(`?tab=${slug}&sub-tab=${subSlug}`);
+  };
   return (
     <div>
       <Accordion expanded={expanded} onChange={handleChange} disableGutters>
@@ -32,9 +64,14 @@ export default function SidebarItem({
           id="panel1bh-header"
           style={{ height: "48px !important" }}
           disableGutters
-          className={expanded && c.expanded}
+          className={summaryClass}
         >
-          <Stack direction="row" alignItems="center" spacing={2}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            spacing={2}
+            onClick={handleItemClick}
+          >
             <Icon />
 
             <Typography
@@ -50,21 +87,23 @@ export default function SidebarItem({
             <Stack
               direction="column"
               alignItems="left"
-              sx={{ paddingLeft: "20px" }}
+              sx={{ paddingLeft: "10px" }}
             >
               {items.map((item, index) => (
                 <Stack
                   direction="row"
                   alignItems="center"
                   spacing={1}
-                  className={c.item}
+                  className={subTabClass(item.slug)}
                   padding={1}
+                  key={index + 10565}
+                  sx={{ cursor: "pointer" }}
+                  onClick={handleSubitemClick.bind(null, item.slug)}
                 >
                   <ArrowForwardIcon fontSize="small" />
                   <Typography
                     className={!showSidebar && c.hide}
                     variant="body2"
-                    key={index + 10565}
                   >
                     {item.text}
                   </Typography>

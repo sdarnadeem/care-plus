@@ -65,15 +65,15 @@ const content = [
     items: [
       {
         text: "Transactions",
-        slug: "clinics",
+        slug: "transactions",
       },
       {
         text: "Admin Payment Details",
-        slug: "doctors",
+        slug: "admin-payment-details",
       },
       {
         text: "Payment Gateway Setting",
-        slug: "doctors",
+        slug: "payment=gateway-setting",
       },
     ],
   },
