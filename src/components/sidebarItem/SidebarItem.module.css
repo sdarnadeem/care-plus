@@ -1,3 +1,7 @@
 .active {
   color: blue;
 }
+
+.hide {
+  display: none;
+}

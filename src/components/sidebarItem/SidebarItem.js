@@ -14,7 +14,9 @@ export default function SidebarItem({
   text,
   items,
   Icon,
+  showSidebar,
 }) {
+  const typographyClass = `${expanded && c.active} ${!showSidebar && c.hide}`;
   return (
     <div>
       <Accordion expanded={expanded} onChange={handleChange}>
@@ -29,7 +31,7 @@ export default function SidebarItem({
 
             <Typography
               sx={{ width: "100%", flexShrink: 0 }}
-              className={expanded && c.active}
+              className={typographyClass}
             >
               {text}
             </Typography>

@@ -1,15 +1,23 @@
 import React from "react";
 
-import { Paper } from "@mui/material";
+import { Paper, Tooltip, IconButton } from "@mui/material";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 import SidebarItem from "../sidebarItem/SidebarItem";
 import data from "./data";
 
-const LeftSidebar = () => {
+const LeftSidebar = ({ handleSidebar }) => {
   const [expanded, setExpanded] = React.useState(false);
+  const [showSidebar, setShowSidebar] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
+  };
+
+  const handleSidebarVisibility = () => {
+    setShowSidebar((prev) => !prev);
+    handleSidebar();
   };
   return (
     <Paper elevation={1} sx={{ minHeight: "100vh !important" }}>
@@ -20,8 +28,26 @@ const LeftSidebar = () => {
           text={item.text}
           key={index + 4645}
           Icon={item.icon}
+          showSidebar={showSidebar}
         />
       ))}
+
+      <Tooltip
+        title={showSidebar ? "Collapse Sidebar" : "Expand Sidebar"}
+        sx={{ float: "right", cursor: "pointer" }}
+      >
+        <IconButton>
+          {showSidebar && (
+            <ArrowLeftIcon fontSize="large" onClick={handleSidebarVisibility} />
+          )}
+          {!showSidebar && (
+            <ArrowRightIcon
+              fontSize="large"
+              onClick={handleSidebarVisibility}
+            />
+          )}
+        </IconButton>
+      </Tooltip>
     </Paper>
   );
 };

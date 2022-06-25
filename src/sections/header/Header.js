@@ -2,7 +2,6 @@ import React from "react";
 
 import { Grid, Paper, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 
 import c from "./Header.module.css";
 import HeaderProfile from "../../components/headerProfile/HeaderProfile";
@@ -12,13 +11,12 @@ const Header = () => {
     <header>
       <Paper elevation={1}>
         <Grid container alignItems="center">
-          <Grid item lg={2}>
+          <Grid item lg={2} alignItems="center">
             <img
               className={c.image}
               src="./images/carePlusLogo.svg"
               alt="logo"
             />
-            <ArrowCircleLeftIcon />
           </Grid>
           <Grid item lg={7}>
             <TextField
