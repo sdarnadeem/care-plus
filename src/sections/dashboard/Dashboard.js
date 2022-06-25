@@ -6,7 +6,7 @@ import LeftSidebar from "../../components/leftSidebar/LeftSidebar";
 import Middle from "../../components/middle/Middle";
 
 const Dashboard = () => {
-  const [showSidebar, setShowSidebar] = React.useState(false);
+  const [showSidebar, setShowSidebar] = React.useState(true);
   const handleSidebar = () => {
     setShowSidebar((prev) => !prev);
   };

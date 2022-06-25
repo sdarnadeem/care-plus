@@ -55,7 +55,12 @@ export default function SidebarItem({
   };
   return (
     <div>
-      <Accordion expanded={expanded} onChange={handleChange} disableGutters>
+      <Accordion
+        expanded={expanded}
+        onChange={handleChange}
+        disableGutters
+        elevation={0}
+      >
         <AccordionSummary
           expandIcon={
             items && showSidebar && items.length > 0 && <ExpandMoreIcon />
@@ -75,6 +80,8 @@ export default function SidebarItem({
             <Icon />
 
             <Typography
+              variant="h6"
+              fontSize="medium"
               sx={{ width: "100%", flexShrink: 0 }}
               className={typographyClass}
             >

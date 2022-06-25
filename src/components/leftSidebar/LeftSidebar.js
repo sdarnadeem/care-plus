@@ -9,7 +9,7 @@ import data from "./data";
 
 const LeftSidebar = ({ handleSidebar }) => {
   const [expanded, setExpanded] = React.useState(false);
-  const [showSidebar, setShowSidebar] = React.useState(false);
+  const [showSidebar, setShowSidebar] = React.useState(true);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
