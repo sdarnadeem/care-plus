@@ -8,6 +8,7 @@ import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
 import DashboardMain from "../dashboardMain/DashboardMain";
 import Commission from "../commission/Commission";
+import AdminProfile from "../adminProfile/AdminProfile";
 
 const Middle = () => {
   const params = useParams();
@@ -22,7 +23,7 @@ const Middle = () => {
       <Route path="/fees" element={<Fees />}></Route>
       <Route path="/payments" element={<Payments />}></Route>
       <Route path="/commission" element={<Commission />}></Route>
-      <Route path="/admin-profile" element={<div>admin-profile</div>}></Route>
+      <Route path="/admin-profile" element={<AdminProfile />}></Route>
     </Routes>
   );
 };
