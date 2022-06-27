@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import {
   Stack,
@@ -10,8 +10,6 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
-import { useSearchParams } from "react-router-dom";
 
 import c from "./SidebarItem.module.css";
 
@@ -24,19 +22,19 @@ export default function SidebarItem({
   showSidebar,
   slug,
 }) {
-  const [searchParams] = useSearchParams();
-
-  const tab = searchParams.get("tab");
-  const subTab = searchParams.get("sub-tab");
-
-  console.log(tab, slug, tab === slug, expanded);
-
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  console.log(pathname);
+
+  const regexForTab = new RegExp("^" + `/${slug}`, "i");
+  const result = regexForTab.test(pathname);
 
   const typographyClass = `${!showSidebar && c.hide}`;
-  const summaryClass = `${c.item} ${tab === slug && c.expanded} `;
+  const summaryClass = `${c.item} ${result && c.expanded} `;
   const subTabClass = (slug) => {
-    if (slug === subTab) {
+    const regexForSubTab = new RegExp(slug + "$", "i");
+    const result = regexForSubTab.test(pathname);
+    if (result) {
       return `${c.item} ${c.expanded}`;
     } else {
       return `${c.item}`;
@@ -47,11 +45,11 @@ export default function SidebarItem({
     if (slug === "logout") {
       return navigate("/login", { replace: true });
     }
-    navigate(`?tab=${slug}`);
+    navigate(`/${slug}`);
   };
 
   const handleSubitemClick = (subSlug) => {
-    navigate(`?tab=${slug}&sub-tab=${subSlug}`);
+    navigate(`/${slug}/${subSlug}`);
   };
   return (
     <div>
