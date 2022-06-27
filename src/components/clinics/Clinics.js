@@ -1,5 +1,5 @@
 import React, { useMemo, useCallback, useRef } from "react";
-import { Box, Tabs, Tab, Grid, Button } from "@mui/material";
+import { Typography, Grid, Button, Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 import { columns, rows } from "./ClinicsData";
@@ -10,7 +10,6 @@ import { AgGridReact } from "ag-grid-react";
 const Clinics = () => {
   const gridRef = useRef();
   const navigate = useNavigate();
-  const [value, setValue] = React.useState(0);
   const [data, setData] = React.useState();
   const [selected, setSelected] = React.useState();
   const [showNewClinicDialog, setShowNewClinicDialog] = React.useState(false);
@@ -23,10 +22,6 @@ const Clinics = () => {
     noFun: () => {},
   });
   const [openDialog, setOpenDialog] = React.useState(false);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   const defaultColDef = useMemo(
     () => ({
@@ -128,7 +123,11 @@ const Clinics = () => {
 
   return (
     <>
-      <Grid container spacing={3}>
+      <Grid container p={2}>
+        <Typography variant="h4">All Clinics</Typography>
+      </Grid>
+      <Divider />
+      <Grid container spacing={3} padding={1}>
         {/* <Grid item>
           <TextField
             size="small"
@@ -186,23 +185,11 @@ const Clinics = () => {
           </>
         )}
         <Grid item>
-          <Button variant="outlined" size="medium" onClick={clearFilters}>
+          <Button variant="standard" size="medium" onClick={clearFilters}>
             Clear Filters
           </Button>
         </Grid>
       </Grid>
-      <Box
-        sx={{
-          width: "100%",
-          bgcolor: "background.paper",
-        }}
-      >
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="All Clinics" />
-          <Tab label="Online Clinics" />
-          <Tab label="Blocks Clinics" />
-        </Tabs>
-      </Box>
       <div className="green-theme">
         <div
           className="ag-theme-alpine"

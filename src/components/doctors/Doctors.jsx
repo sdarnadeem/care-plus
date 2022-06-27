@@ -110,7 +110,7 @@ const Doctors = () => {
   };
   return (
     <>
-      <Grid container spacing={2} margin={1}>
+      <Grid container spacing={2} padding={1}>
         <Grid item>
           <Button
             variant="outlined"
@@ -144,7 +144,7 @@ const Doctors = () => {
           </>
         )}
         <Grid item>
-          <Button variant="outlined" size="medium" onClick={clearFilters}>
+          <Button variant="standard" size="medium" onClick={clearFilters}>
             Reset Filters
           </Button>
         </Grid>

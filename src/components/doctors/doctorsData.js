@@ -45,6 +45,7 @@ export const columnDefs = [
   },
   { field: "clinic", filter: true, filterParams: firstNameFilterParams },
   { field: "address", filter: true, filterParams: firstNameFilterParams },
+  { field: "contact", headerName: "Contact Details" },
 ];
 
 export const rowData = [
@@ -54,6 +55,7 @@ export const rowData = [
     firstName: "Jon",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "2",
@@ -61,6 +63,7 @@ export const rowData = [
     firstName: "Cersei",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "3",
@@ -68,6 +71,7 @@ export const rowData = [
     firstName: "Jaime",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "4",
@@ -75,6 +79,7 @@ export const rowData = [
     firstName: "Arya",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "5",
@@ -82,6 +87,7 @@ export const rowData = [
     firstName: "Daenerys",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "6",
@@ -89,6 +95,7 @@ export const rowData = [
     firstName: "Yenni",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "7",
@@ -96,6 +103,7 @@ export const rowData = [
     firstName: "Ferrara",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "8",
@@ -103,6 +111,7 @@ export const rowData = [
     firstName: "Rossini",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
   {
     id: "9",
@@ -110,5 +119,6 @@ export const rowData = [
     firstName: "Harvey",
     clinic: "Afar Labs",
     address: "Sagipora Sopore",
+    contact: "+9149575307",
   },
 ];
