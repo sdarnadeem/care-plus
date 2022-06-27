@@ -1,27 +1,19 @@
 import React, { useMemo, useCallback, useRef } from "react";
 
-import {
-  Box,
-  Tab,
-  Tabs,
-  Grid,
-  Button,
-  Typography,
-  Divider,
-} from "@mui/material";
+import { Grid, Button, Divider, Typography } from "@mui/material";
 import { AgGridReact } from "ag-grid-react";
 
-import data from "./feesData";
 import Dialog from "../dialog/Dialog";
-
 import { useNavigate } from "react-router-dom";
 
-const Fees = () => {
+import data from "./paymentsData";
+
+const Payments = () => {
   const gridRef = useRef();
   const navigate = useNavigate();
 
-  const [columns] = React.useState(data[0].columns);
-  const [rows] = React.useState(data[0].rows);
+  const [columns] = React.useState(data.columns);
+  const [rows] = React.useState(data.rows);
 
   const [selected, setSelected] = React.useState();
   const [dialogDetails, setDialogDetails] = React.useState({
@@ -84,7 +76,7 @@ const Fees = () => {
   return (
     <>
       <Grid container p={2} justifyContent="space-between">
-        <Typography variant="h4">Fees</Typography>
+        <Typography variant="h4">Payments</Typography>
         <Grid item height="100%" alignItems="center">
           <Button variant="standard" size="small" onClick={clearFilters}>
             Reset Filters
@@ -92,7 +84,14 @@ const Fees = () => {
         </Grid>
       </Grid>
       <Divider />
-      <Grid container justifyContent="end"></Grid>
+
+      {/* {selected && (
+          <Grid item>
+            <Button variant="outlined" size="small" onClick={handleButtonClick}>
+              Update Clinic
+            </Button>
+          </Grid>
+        )} */}
 
       <div
         className="ag-theme-alpine"
@@ -130,4 +129,4 @@ const Fees = () => {
   );
 };
 
-export default Fees;
+export default Payments;
