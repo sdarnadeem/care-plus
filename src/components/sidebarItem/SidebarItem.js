@@ -80,7 +80,7 @@ export default function SidebarItem({
             <Icon />
 
             <Typography
-              variant="h6"
+              variant="body1"
               fontSize="medium"
               sx={{ width: "100%", flexShrink: 0 }}
               className={typographyClass}

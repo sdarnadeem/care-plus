@@ -11,14 +11,14 @@ const Header = () => {
     <header>
       <Paper elevation={1}>
         <Grid container alignItems="center">
-          <Grid item lg={2} alignItems="center">
+          <Grid item lg={2} md={3} sm={4} alignItems="center">
             <img
               className={c.image}
               src="./images/carePlusLogo.svg"
               alt="logo"
             />
           </Grid>
-          <Grid item lg={7}>
+          <Grid item lg={7} md={4}>
             <TextField
               id="input-with-icon-textfield"
               placeholder="Type to search"
@@ -33,7 +33,7 @@ const Header = () => {
               size="small"
             />
           </Grid>
-          <Grid item lg={3}>
+          <Grid item lg={3} md={5} sm={8}>
             <HeaderProfile />
           </Grid>
         </Grid>
