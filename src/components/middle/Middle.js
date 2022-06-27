@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import DashboardMain from "../dashboardMain/DashboardMain";
-import Patient from "../patient/Patient"
+import Patient from "../patient/Patient";
 import Clinic from "../clinics/Clinics";
 import Doctor from "../doctors/Doctors";
 import Fees from "../fees/Fees";

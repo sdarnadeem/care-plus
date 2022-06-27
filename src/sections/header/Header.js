@@ -83,6 +83,7 @@ const Header = () => {
           >
             <TextField
               id="input-with-icon-textfield"
+              label=""
               placeholder="Type to search"
               InputProps={{
                 startAdornment: (
@@ -93,6 +94,7 @@ const Header = () => {
               }}
               variant="outlined"
               size="small"
+              color="secondary"
             />
           </Grid>
           <Grid item lg={3} md={5} sm={10} xs={11}>
