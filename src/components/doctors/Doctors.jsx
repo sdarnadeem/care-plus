@@ -3,7 +3,7 @@ import { AgGridReact } from "ag-grid-react";
 
 import { useNavigate } from "react-router-dom";
 
-import { Button, Grid } from "@mui/material";
+import { Button, Divider, Grid, Typography } from "@mui/material";
 
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
@@ -110,6 +110,10 @@ const Doctors = () => {
   };
   return (
     <>
+      <Grid container p={2}>
+        <Typography variant="h4">Doctors</Typography>
+      </Grid>
+      <Divider />
       <Grid container spacing={2} padding={1}>
         <Grid item>
           <Button
