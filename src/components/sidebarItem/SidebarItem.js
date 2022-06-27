@@ -26,7 +26,7 @@ export default function SidebarItem({
   const { pathname } = useLocation();
   console.log(pathname);
 
-  const regexForTab = new RegExp("^" + `/${slug}`, "i");
+  const regexForTab = new RegExp(`^/${slug}`, "i");
   const result = regexForTab.test(pathname);
 
   const typographyClass = `${!showSidebar && c.hide}`;
