@@ -12,7 +12,11 @@ const Dashboard = () => {
   };
   return (
     <Grid container>
-      <Grid item lg={showSidebar ? 2 : 0.5}>
+      <Grid
+        item
+        lg={showSidebar ? 2 : 0.5}
+        display={{xs: "none", sm: "none", lg: "inline-block", md: "inline-block" }}
+      >
         <LeftSidebar handleSidebar={handleSidebar} />
       </Grid>
       <Grid item lg={showSidebar ? 10 : 11.5}>
