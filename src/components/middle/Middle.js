@@ -1,7 +1,13 @@
 import React from "react";
+import DashboardMain from "../dashboardMain/DashboardMain";
 
 const Middle = () => {
-  return <div>Middle</div>;
+  return (
+    <>
+      <DashboardMain />
+    </>
+  )
+
 };
 
 export default Middle;
