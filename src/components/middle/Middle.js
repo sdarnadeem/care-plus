@@ -6,14 +6,15 @@ import Clinic from "../clinics/Clinics";
 import Doctor from "../doctors/Doctors";
 import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
+import DashboardMain from "../dashboardMain/DashboardMain";
 
 const Middle = () => {
   const params = useParams();
   console.log(params);
   return (
     <Routes>
-      <Route path="/" element={<div>main page</div>} />
-      <Route path="/dashboard" element={<div>dashboard</div>} />
+      <Route path="/" element={<DashboardMain />} />
+      <Route path="/dashboard" element={<DashboardMain />} />
       <Route path="/patient" element={<div>Patient</div>}></Route>
       <Route path="/clinics" element={<Clinic />}></Route>
       <Route path="/doctors" element={<Doctor />}></Route>
