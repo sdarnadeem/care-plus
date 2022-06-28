@@ -1,5 +1,6 @@
 .field {
   border-radius: 0 !important;
+  outline: none !important;
 }
 
 .field:focus,
@@ -7,4 +8,5 @@
 field:hover {
   border: 1px solid blue !important;
   border-radius: 0 !important;
+  outline: none !important;
 }

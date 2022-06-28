@@ -4,10 +4,13 @@ import { Stack, Typography, TextField, Box } from "@mui/material";
 import { FileUploader } from "react-drag-drop-files";
 
 import c from "./NewDoctor.module.css";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 const fileTypes = ["JPEG", "PNG", "GIF"];
 
 const NewDoctor = () => {
   const [file, setFile] = React.useState(null);
+  const [value, setValue] = React.useState(null);
   const handleChange = (file) => {
     setFile(file);
   };
@@ -84,6 +87,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -97,6 +101,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -111,6 +116,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -123,6 +129,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -137,6 +144,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -149,6 +157,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -163,6 +172,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -175,6 +185,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -189,6 +200,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -201,6 +213,7 @@ const NewDoctor = () => {
           size="small"
           sx={{
             border: "1px solid black",
+            borderRadius: "4px",
             width: "500px",
             marginBottom: "20px",
             marginRight: "20px",
@@ -208,7 +221,14 @@ const NewDoctor = () => {
           width="332px !important"
           placeholder="Mobile Number"
         />
-        <Box sx={{ border: "1px solid black", padding: "10px" }}>
+        <Box
+          sx={{
+            border: "1px solid black",
+            padding: "10px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+        >
           <Stack direction="column" spacing={1}>
             <Typography variant="body1">Upload Profile Picture</Typography>
             <FileUploader
@@ -222,6 +242,57 @@ const NewDoctor = () => {
             </Typography>
           </Stack>
         </Box>
+        <TextField
+          id="outlined-multiline-flexible"
+          variant="outlined"
+          fullWidth
+          size="small"
+          multiline={true}
+          maxRows={4}
+          sx={{
+            border: "1px solid rgba(0, 0, 0, 0.87)",
+            borderRadius: "4px",
+
+            marginBottom: "20px",
+            marginRight: "80px",
+          }}
+          width="332px !important"
+          placeholder="Short Bio"
+        />
+
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <DatePicker
+            label="Date of Birth"
+            value={value}
+            placeholder="Date of Birth"
+            onChange={(newValue) => {
+              setValue(newValue);
+            }}
+            size="small"
+            style={{
+              border: "1px solid black",
+              borderRadius: "4px",
+              width: "500px",
+              marginBottom: "20px",
+              marginRight: "20px !important",
+            }}
+            renderInput={(params) => <TextField {...params} />}
+          />
+        </LocalizationProvider>
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            borderRadius: "4px",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          width="332px !important"
+          placeholder="Blood Group"
+        />
       </Stack>
     </>
   );
