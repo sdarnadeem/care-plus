@@ -10,15 +10,27 @@ const Dashboard = () => {
   const handleSidebar = () => {
     setShowSidebar((prev) => !prev);
   };
+
   return (
-    <Grid container>
-      <Grid item lg={showSidebar ? 2 : 0.5}>
-        <LeftSidebar handleSidebar={handleSidebar} />
+    <>
+      <Grid container>
+        <Grid
+          item
+          lg={showSidebar ? 2 : 0.5}
+          display={{
+            xs: "none",
+            sm: "none",
+            lg: "inline-block",
+            md: "inline-block",
+          }}
+        >
+          <LeftSidebar handleSidebar={handleSidebar} />
+        </Grid>
+        <Grid item lg={showSidebar ? 10 : 11.5}>
+          <Middle />
+        </Grid>
       </Grid>
-      <Grid item lg={showSidebar ? 10 : 11.5}>
-        <Middle />
-      </Grid>
-    </Grid>
+    </>
   );
 };
 

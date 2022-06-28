@@ -49,12 +49,12 @@ const content = [
     slug: "fees",
     items: [
       {
-        text: "Clinics",
-        slug: "clinics",
+        text: "Clinic",
+        slug: "clinic",
       },
       {
-        text: "Doctors",
-        slug: "doctors",
+        text: "Doctor",
+        slug: "doctor",
       },
     ],
   },
