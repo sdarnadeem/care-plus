@@ -1,9 +1,27 @@
 import React from "react";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+
+import {
+  Box,
+  Grid,
+  Menu,
+  MenuItem,
+  Stack,
+  Typography,
+  Fade,
+} from "@mui/material";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import c from "./SingleDoctor.module.css";
 
 const SingleDoctor = ({ image, name, hospital }) => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Box
       sx={{
@@ -12,6 +30,7 @@ const SingleDoctor = ({ image, name, hospital }) => {
         borderRadius: "13.36px",
         border: "2px solid #0089FF",
         background: "#fff",
+        position: "relative",
       }}
       margin={{
         lg: "10px 30px",
@@ -61,6 +80,21 @@ const SingleDoctor = ({ image, name, hospital }) => {
           </Stack>
         </Grid>
       </Grid>
+      <MoreVertIcon fontSize="small" className={c.more} onClick={handleClick} />
+      <Menu
+        id="fade-menu"
+        MenuListProps={{
+          "aria-labelledby": "fade-button",
+        }}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Fade}
+      >
+        <MenuItem onClick={handleClose}>Edit</MenuItem>
+        <MenuItem onClick={handleClose}>Delete</MenuItem>
+        <MenuItem onClick={handleClose}>Block</MenuItem>
+      </Menu>
     </Box>
   );
 };
