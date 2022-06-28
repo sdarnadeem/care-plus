@@ -1,10 +1,16 @@
 import React from "react";
 
 import { Stack, Typography, TextField, Box } from "@mui/material";
+import { FileUploader } from "react-drag-drop-files";
 
 import c from "./NewDoctor.module.css";
+const fileTypes = ["JPEG", "PNG", "GIF"];
 
 const NewDoctor = () => {
+  const [file, setFile] = React.useState(null);
+  const handleChange = (file) => {
+    setFile(file);
+  };
   return (
     <>
       <Stack direction="row">
@@ -202,6 +208,20 @@ const NewDoctor = () => {
           width="332px !important"
           placeholder="Mobile Number"
         />
+        <Box sx={{ border: "1px solid black", padding: "10px" }}>
+          <Stack direction="column" spacing={1}>
+            <Typography variant="body1">Upload Profile Picture</Typography>
+            <FileUploader
+              multiple={false}
+              handleChange={handleChange}
+              name="file"
+              types={fileTypes}
+            />
+            <Typography variant="caption">
+              {file ? `File name: ${file[0].name}` : "no files uploaded yet"}
+            </Typography>
+          </Stack>
+        </Box>
       </Stack>
     </>
   );
