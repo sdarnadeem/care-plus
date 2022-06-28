@@ -1,3 +1,215 @@
+import React from "react";
+
+import { Stack, Typography, TextField, Box } from "@mui/material";
+
+import c from "./NewDoctor.module.css";
+
+const NewDoctor = () => {
+  return (
+    <>
+      <Stack direction="row">
+        <Box
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            display: "flex",
+            width: 140,
+            height: 31,
+            background:
+              "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+            borderRadius: "64px",
+          }}
+          margin={{
+            lg: "10px 30px",
+            md: "5xp 10px",
+            sm: "5px 10px",
+            xs: "5px 10px",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "#fff",
+            }}
+          >
+            Doctor's List
+          </Typography>
+        </Box>
+        <Box
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            display: "flex",
+            width: 140,
+            height: 31,
+            background:
+              "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+            borderRadius: "64px",
+          }}
+          margin={{
+            lg: "10px 10px",
+            md: "5xp 10px",
+            sm: "5px 10px",
+            xs: "5px 10px",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "#fff",
+            }}
+          >
+            Add Doctor
+          </Typography>
+        </Box>
+      </Stack>
+      <Stack direction="row" padding="10px" sx={{ flexWrap: "wrap" }}>
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          placeholder="Enter First Name"
+          className={c.field}
+        />
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          width="332px !important"
+          placeholder="Enter Last Name"
+        />
+
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          placeholder="Enter Email Address"
+        />
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          width="332px !important"
+          placeholder="Create Password"
+        />
+
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          placeholder="Designation"
+        />
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          width="332px !important"
+          placeholder="Department"
+        />
+
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          placeholder="Speciality"
+        />
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          width="332px !important"
+          placeholder="Experience"
+        />
+
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          placeholder="Address"
+        />
+        <TextField
+          id="filled-basic"
+          variant="outlined"
+          size="small"
+          sx={{
+            border: "1px solid black",
+            width: "500px",
+            marginBottom: "20px",
+            marginRight: "20px",
+          }}
+          width="332px !important"
+          placeholder="Mobile Number"
+        />
+      </Stack>
+    </>
+  );
+};
+
+export default NewDoctor;
+
+/*
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -168,3 +380,5 @@ const NewDoctor = ({ open, handleClose, data }) => {
 };
 
 export default NewDoctor;
+
+*/

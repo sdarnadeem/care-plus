@@ -1,0 +1,10 @@
+.field {
+  border-radius: 0 !important;
+}
+
+.field:focus,
+.field:active,
+field:hover {
+  border: 1px solid blue !important;
+  border-radius: 0 !important;
+}
