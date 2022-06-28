@@ -6,36 +6,70 @@ import { Box, Grid, Pagination, Stack, Typography } from "@mui/material";
 const Doctors = () => {
   return (
     <Stack direction="column">
-      <Box
-        alignItems="center"
-        justifyContent="center"
-        sx={{
-          display: "flex",
-          width: 140,
-          height: 31,
-          background: "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
-          borderRadius: "64px",
-        }}
-        margin={{
-          lg: "10px 30px",
-          md: "5xp 10px",
-          sm: "5px 10px",
-          xs: "5px 10px",
-        }}
-      >
-        <Typography
+      <Stack direction="row">
+        <Box
+          alignItems="center"
+          justifyContent="center"
           sx={{
-            fontFamily: "Montserrat",
-            fontStyle: "normal",
-            fontWeight: 500,
-            fontSize: "13px",
-            lineHeight: "16px",
-            color: "#fff",
+            display: "flex",
+            width: 140,
+            height: 31,
+            background:
+              "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+            borderRadius: "64px",
+          }}
+          margin={{
+            lg: "10px 30px",
+            md: "5xp 10px",
+            sm: "5px 10px",
+            xs: "5px 10px",
           }}
         >
-          Doctor's List
-        </Typography>
-      </Box>
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "#fff",
+            }}
+          >
+            Doctor's List
+          </Typography>
+        </Box>
+        <Box
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            display: "flex",
+            width: 140,
+            height: 31,
+            background:
+              "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+            borderRadius: "64px",
+          }}
+          margin={{
+            lg: "10px 10px",
+            md: "5xp 10px",
+            sm: "5px 10px",
+            xs: "5px 10px",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "#fff",
+            }}
+          >
+            Add Doctor
+          </Typography>
+        </Box>
+      </Stack>
       <Stack direction="row" sx={{ flexWrap: "wrap" }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
           <SingleDoctor
