@@ -1,7 +1,7 @@
 import React from "react";
 import SingleDoctor from "./singleDoctor/SingleDoctor";
 
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Grid, Pagination, Stack, Typography } from "@mui/material";
 
 const Doctors = () => {
   return (
@@ -46,6 +46,15 @@ const Doctors = () => {
           />
         ))}
       </Stack>
+      <Grid
+        mt={2}
+        pr={5}
+        display="flex"
+        justifyContent="end"
+        sx={{ display: "flex", justifyContent: "flex-end", width: "100%" }}
+      >
+        <Pagination count={10} color="secondary" />
+      </Grid>
     </Stack>
   );
 };
