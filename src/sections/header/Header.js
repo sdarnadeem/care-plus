@@ -7,8 +7,11 @@ import {
   InputAdornment,
   SwipeableDrawer,
 } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
+
+import { InputGroup, InputLeftElement, Input } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 
 import c from "./Header.module.css";
 import HeaderProfile from "../../components/headerProfile/HeaderProfile";
@@ -81,7 +84,7 @@ const Header = () => {
               md: "inline-block",
             }}
           >
-            <TextField
+            {/* <TextField
               id="input-with-icon-textfield"
               label=""
               placeholder="Type to search"
@@ -92,10 +95,33 @@ const Header = () => {
                   </InputAdornment>
                 ),
               }}
-              variant="outlined"
+              variant="filled"
               size="small"
               color="secondary"
-            />
+              sx={{
+                border: "none",
+                height: "30px",
+                width: "426px",
+                borderRadius: "9px",
+              }}
+            /> */}
+            <InputGroup variant="filled">
+              <InputLeftElement
+                pointerEvents="none"
+                children={<SearchIcon color="gray.300" />}
+                className={c.inputLeft}
+              />
+              <Input
+                type="search"
+                placeholder="Enter to search"
+                size="lg"
+                width="426px"
+                variant="filled"
+                padding="5px"
+                paddingLeft={2}
+                className={c.input}
+              />
+            </InputGroup>
           </Grid>
           <Grid item lg={3} md={5} sm={10} xs={11}>
             <HeaderProfile />

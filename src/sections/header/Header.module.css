@@ -3,3 +3,11 @@
   height: 50px;
   margin-left: 3rem;
 }
+
+.inputLeft {
+  bottom: 3px !important;
+  left: 10px !important;
+}
+.input {
+  padding-left: 30px !important;
+}
