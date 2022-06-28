@@ -1,18 +1,51 @@
-import { Stack } from "@mui/material";
 import React from "react";
 import SingleDoctor from "./singleDoctor/SingleDoctor";
 
+import { Box, Stack, Typography } from "@mui/material";
+
 const Doctors = () => {
   return (
-    <Stack direction="row" sx={{ flexWrap: "wrap" }}>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
-        <SingleDoctor
-          key={item + 3859}
-          image="https://images.unsplash.com/photo-1656350703134-3411d026f397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-          name="Dr. Mahmud Nik"
-          hospital="Bangabandhu Sheikh Mujib Medical University Hospital"
-        />
-      ))}
+    <Stack direction="column">
+      <Box
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          display: "flex",
+          width: 140,
+          height: 31,
+          background: "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+          borderRadius: "64px",
+        }}
+        margin={{
+          lg: "10px 30px",
+          md: "5xp 10px",
+          sm: "5px 10px",
+          xs: "5px 10px",
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: "Montserrat",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "13px",
+            lineHeight: "16px",
+            color: "#fff",
+          }}
+        >
+          Doctor's List
+        </Typography>
+      </Box>
+      <Stack direction="row" sx={{ flexWrap: "wrap" }}>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
+          <SingleDoctor
+            key={item + 3859}
+            image="https://images.unsplash.com/photo-1656350703134-3411d026f397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+            name="Dr. Mahmud Nik"
+            hospital="Bangabandhu Sheikh Mujib Medical University Hospital"
+          />
+        ))}
+      </Stack>
     </Stack>
   );
 };
