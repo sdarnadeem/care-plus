@@ -29,7 +29,7 @@ const SinglePatient = ({ image, name, diagnostic, bloodGroup }) => {
         height="100%"
         wrap="nowrap"
       >
-        <Grid item pr="10.78px" pl="9.8px">
+        <Grid item pr="20.78px" pl="9.8px">
           <img src={image} alt="doctor" className={c.image} />
         </Grid>
         <Grid item>
