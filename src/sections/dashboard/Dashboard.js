@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Grid container>
+      <Grid container sx={{ flexWrap: "nowrap" }}>
         <Grid
           item
           lg={showSidebar ? 2 : 0.5}
@@ -26,7 +26,7 @@ const Dashboard = () => {
         >
           <LeftSidebar handleSidebar={handleSidebar} />
         </Grid>
-        <Grid item lg={showSidebar ? 10 : 11.5}>
+        <Grid item lg={showSidebar ? 10 : 11.5} sx={{ background: "#F6F6FF" }}>
           <Middle />
         </Grid>
       </Grid>

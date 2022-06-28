@@ -1,4 +1,25 @@
-import React, { useState, useMemo, useCallback, useRef } from "react";
+import { Stack } from "@mui/material";
+import React from "react";
+import SingleDoctor from "./singleDoctor/SingleDoctor";
+
+const Doctors = () => {
+  return (
+    <Stack direction="row" sx={{ flexWrap: "wrap" }}>
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
+        <SingleDoctor
+          key={item + 3859}
+          image="https://images.unsplash.com/photo-1656350703134-3411d026f397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          name="Dr. Mahmud Nik"
+          hospital="Bangabandhu Sheikh Mujib Medical University Hospital"
+        />
+      ))}
+    </Stack>
+  );
+};
+
+export default Doctors;
+
+/*  import React, { useState, useMemo, useCallback, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
 
 import { useNavigate } from "react-router-dom";
@@ -198,3 +219,5 @@ const Doctors = () => {
 };
 
 export default Doctors;
+
+*/
