@@ -7,6 +7,7 @@ import Patient from "../patient/Patient";
 import Clinic from "../clinics/Clinics";
 import Doctor from "../doctors/Doctors";
 import NewDoctor from "../doctors/newDoctor/NewDoctor";
+import DoctorSchedule from "../doctorSchedule/DoctorSchedule";
 import Department from "../department/Department";
 import NewDepartment from "../department/newDepartment/NewDepartment";
 import Fees from "../fees/Fees";
@@ -28,6 +29,15 @@ const Middle = () => {
       <Route path="/doctors" element={<Doctor />}></Route>
       <Route path="/doctors/doctor-list" element={<Doctor />}></Route>
       <Route path="/doctors/add-doctor" element={<NewDoctor />}></Route>
+      <Route path="/doctors-schedule" element={<DoctorSchedule />}></Route>
+      <Route
+        path="/doctors-schedule/schedule-list"
+        element={<DoctorSchedule />}
+      ></Route>
+      <Route
+        path="/doctors-schedule/add-schedule"
+        element={<DoctorSchedule />}
+      ></Route>
       <Route path="/department" element={<Department />}></Route>
       <Route
         path="/department/department-list"

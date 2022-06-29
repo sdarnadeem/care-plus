@@ -1,6 +1,7 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import BiotechIcon from "@mui/icons-material/Biotech";
 import GroupIcon from "@mui/icons-material/Group";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import PaymentIcon from "@mui/icons-material/Payment";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
@@ -42,6 +43,15 @@ const content = [
     items: [
       { text: "Doctor List", slug: "doctor-list" },
       { text: "Add Doctor", slug: "add-doctor" },
+    ],
+  },
+  {
+    icon: CalendarMonthIcon,
+    text: "Doctors Schedule",
+    slug: "doctors-schedule",
+    items: [
+      { text: "Schedule List", slug: "schedule-list" },
+      { text: "Add Schedule", slug: "add-schedule" },
     ],
   },
   {
