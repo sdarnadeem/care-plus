@@ -29,12 +29,8 @@ const content = [
         slug: "all-clinics",
       },
       {
-        text: "Online Clinics",
-        slug: "online-clinics",
-      },
-      {
-        text: "Block Clinics",
-        slug: "block-clinics",
+        text: "Diagnostic Center",
+        slug: "diagnostic-center",
       },
     ],
   },
