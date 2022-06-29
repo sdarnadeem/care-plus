@@ -134,7 +134,7 @@ const NewDepartment = () => {
         marginBottom={3}
         sx={{ flexDirection: "row" }}
       >
-        <Grid item>
+        <Grid item paddingLeft={10}>
           <Button
             sx={{
               width: "90px",
