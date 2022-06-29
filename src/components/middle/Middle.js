@@ -10,6 +10,7 @@ import NewDoctor from "../doctors/newDoctor/NewDoctor";
 import DoctorSchedule from "../doctorSchedule/DoctorSchedule";
 import Department from "../department/Department";
 import NewDepartment from "../department/newDepartment/NewDepartment";
+import Appointment from "../appointment/Appointment"
 import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
 import Commission from "../commission/Commission";
@@ -48,6 +49,7 @@ const Middle = () => {
         path="/department/add-department"
         element={<NewDepartment />}
       ></Route>
+      <Route path="/appointment" element={<Appointment />}></Route>
       <Route path="/fees" element={<Fees />}></Route>
       <Route path="/fees/clinic" element={<FeeClinic />}></Route>
       <Route path="/payments" element={<Payments />}></Route>
