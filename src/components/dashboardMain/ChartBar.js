@@ -1,5 +1,5 @@
 import React from 'react'
-import { PieChart, Pie, Sector, Cell, Tooltip, XAxis, YAxis, Legend, CartesianGrid, Bar, BarChart } from "recharts"
+import { Tooltip, XAxis, YAxis, Legend, CartesianGrid, Bar, BarChart } from "recharts"
 const ChartBar = () => {
     const data = [
         { name: "Jan", value: "20" },

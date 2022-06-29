@@ -1,10 +1,13 @@
 import React from "react";
 import ChartBar from "./ChartBar";
 import PieData from "./PieData";
+import "../dashboardMain/DashboardMain.css"
+import { FaBeer } from 'react-icons/fa';
 
 const DashboardMain = () => {
+
   return (
-    <>
+    <div className="main-content">
       <div className="col-md-10 bg-lg shadow mt-3 ms-5 ">
         <div className="row ">
           <div className="col-xl-3 col-lg-6">
@@ -13,8 +16,9 @@ const DashboardMain = () => {
                 <div className="card-icon card-icon-large">
                   <i className="fas fa-shopping-cart"></i>
                 </div>
-                <div className="mb-4">
-                  <h5 className="card-title mb-0">New Orders</h5>
+                <div className="mb-4 d-flex justify-content-between">
+                  <h5 className="card-title mb-0">Total Doctors</h5>
+                  <i><img src="https://previews.123rf.com/images/bestvectorstock/bestvectorstock1808/bestvectorstock180813927/107223766-doctor-vector-icon-isolated-on-transparent-background-doctor-logo-concept.jpg" className="img" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -22,7 +26,7 @@ const DashboardMain = () => {
                   </div>
                   <div className="col-4 text-right">
                     <span>
-                      12.5% <i className="fa fa-arrow-up"></i>
+                      12.5% <i class="fa fa-home" aria-hidden="true"></i>
                     </span>
                   </div>
                 </div>
@@ -50,8 +54,9 @@ const DashboardMain = () => {
                 <div className="card-icon card-icon-large">
                   <i className="fas fa-users"></i>
                 </div>
-                <div className="mb-4">
-                  <h5 className="card-title mb-0">Customers</h5>
+                <div className="mb-4 d-flex justify-content-between">
+                  <h5 className="card-title mb-0">Patient</h5>
+                  <i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Pke_otputm7YhK-7y8ACs3iCyppJNbDWXg&usqp=CAU" className="img" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -87,8 +92,9 @@ const DashboardMain = () => {
                 <div className="card-icon card-icon-large">
                   <i className="fas fa-ticket-alt"></i>
                 </div>
-                <div className="mb-4">
-                  <h5 className="card-title mb-0">Ticket Resolved</h5>
+                <div className="mb-4 d-flex justify-content-between">
+                  <h5 className="card-title mb-0">Clinics</h5>
+                  <i><img src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png" className="img" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -124,8 +130,9 @@ const DashboardMain = () => {
                 <div className="card-icon card-icon-large">
                   <i className="fas fa-dollar-sign"></i>
                 </div>
-                <div className="mb-4">
-                  <h5 className="card-title mb-0">Revenue Today</h5>
+                <div className="mb-4 d-flex justify-content-between">
+                  <h5 className="card-title mb-0">Total Revenue</h5>
+                  <i><img src="https://icon2.cleanpng.com/20180403/hce/kisspng-revenue-computer-icons-business-profit-sales-income-5ac3f349f3aaa4.1202206815227912419981.jpg" className="img" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -157,9 +164,9 @@ const DashboardMain = () => {
           </div>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
-        <div className="mt-5 ms-5" style={{ width: "36%" }}>
-          <div>
+      <div className="main-chart">
+        <div className="mt-5 ms-5 col-6 col-md-4" style={{ width: "36%" }}>
+          <div >
             <ChartBar />
           </div>
           <div>
@@ -242,7 +249,7 @@ const DashboardMain = () => {
           {/* css over */}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

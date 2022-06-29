@@ -11,7 +11,7 @@ import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
 import Commission from "../commission/Commission";
 import AdminProfile from "../adminProfile/AdminProfile";
-
+import FeeClinic from "../fees/FeeClinic";
 const Middle = () => {
   const params = useParams();
   console.log(params);
@@ -24,6 +24,7 @@ const Middle = () => {
       <Route path="/doctors" element={<Doctor />}></Route>
       <Route path="/doctors/add-doctor" element={<NewDoctor />}></Route>
       <Route path="/fees" element={<Fees />}></Route>
+      <Route path="/fees/clinic" element={<FeeClinic />}></Route>
       <Route path="/payments" element={<Payments />}></Route>
       <Route path="/commission" element={<Commission />}></Route>
       <Route path="/admin-profile" element={<AdminProfile />}></Route>
