@@ -1,0 +1,23 @@
+.main-chart{
+    overflow-x: hidden;
+    display: flex;
+}
+.img{
+  /* position: absolute; */
+  width: 56px;
+  height: 56px;
+  /* left: 542px;
+  top: 164px; */
+}
+  
+  @media screen and (max-width: 900px) and (min-width:250px) {
+    .main-chart {
+      display: block;
+      width: fit-content;
+      overflow-x: hidden !important;
+     }
+     .main-content{
+      max-width: 50% !important;
+      overflow-x: hidden !important;
+     }
+  }
