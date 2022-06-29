@@ -48,7 +48,7 @@ const content = [
   {
     icon: CalendarMonthIcon,
     text: "Doctors Schedule",
-    slug: "doctors-schedule",
+    slug: "doctor-schedule",
     items: [
       { text: "Schedule List", slug: "schedule-list" },
       { text: "Add Schedule", slug: "add-schedule" },

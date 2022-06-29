@@ -3,6 +3,8 @@ import { AgGridReact } from "ag-grid-react";
 import React, { useMemo, useCallback } from "react";
 import { columns, rows } from "./doctorScheduleData";
 
+import c from "./DoctorSchedule.module.css";
+
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
@@ -13,6 +15,7 @@ const DoctorSchedule = () => {
     () => ({
       sortable: true,
       resizable: true,
+      headerClass: c.header,
     }),
     []
   );

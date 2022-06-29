@@ -29,7 +29,7 @@ const Middle = () => {
       <Route path="/doctors" element={<Doctor />}></Route>
       <Route path="/doctors/doctor-list" element={<Doctor />}></Route>
       <Route path="/doctors/add-doctor" element={<NewDoctor />}></Route>
-      <Route path="/doctors-schedule" element={<DoctorSchedule />}></Route>
+      <Route path="/doctor-schedule" element={<DoctorSchedule />}></Route>
       <Route
         path="/doctors-schedule/schedule-list"
         element={<DoctorSchedule />}
