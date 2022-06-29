@@ -97,6 +97,7 @@ const NewDoctor = () => {
           id="filled-basic"
           variant="outlined"
           size="small"
+          width={{ xs: "100%" }}
           sx={{
             border: "1px solid black",
             borderRadius: "4px",
@@ -263,6 +264,7 @@ const NewDoctor = () => {
           size="small"
           multiline={true}
           maxRows={4}
+          marginRight={{ sm: "10px" }}
           sx={{
             border: "1px solid rgba(0, 0, 0, 0.87)",
             borderRadius: "4px",
