@@ -1,3 +1,4 @@
+import ActionCell from "./cells/ActionCell";
 import StatusCell from "./cells/StatusCell";
 
 let filterTextParams = {
@@ -74,6 +75,7 @@ export const columns = [
   {
     field: "action",
     headerName: "Action",
+    cellRenderer: ActionCell,
     width: "100px",
   },
 ];
