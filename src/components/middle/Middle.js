@@ -7,6 +7,9 @@ import Patient from "../patient/Patient";
 import Clinic from "../clinics/Clinics";
 import Doctor from "../doctors/Doctors";
 import NewDoctor from "../doctors/newDoctor/NewDoctor";
+import DoctorSchedule from "../doctorSchedule/DoctorSchedule";
+import Department from "../department/Department";
+import NewDepartment from "../department/newDepartment/NewDepartment";
 import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
 import Commission from "../commission/Commission";
@@ -22,8 +25,29 @@ const Middle = () => {
       <Route path="/dashboard" element={<DashboardMain />} />
       <Route path="/patient" element={<Patient />}></Route>
       <Route path="/clinics" element={<Clinic />}></Route>
+      <Route path="/clinics/all-clinics" element={<Clinic />}></Route>
+      <Route path="/clinics/diagnostic-center" element={<Clinic />}></Route>
       <Route path="/doctors" element={<Doctor />}></Route>
+      <Route path="/doctors/doctor-list" element={<Doctor />}></Route>
       <Route path="/doctors/add-doctor" element={<NewDoctor />}></Route>
+      <Route path="/doctor-schedule" element={<DoctorSchedule />}></Route>
+      <Route
+        path="/doctors-schedule/schedule-list"
+        element={<DoctorSchedule />}
+      ></Route>
+      <Route
+        path="/doctors-schedule/add-schedule"
+        element={<DoctorSchedule />}
+      ></Route>
+      <Route path="/department" element={<Department />}></Route>
+      <Route
+        path="/department/department-list"
+        element={<Department />}
+      ></Route>
+      <Route
+        path="/department/add-department"
+        element={<NewDepartment />}
+      ></Route>
       <Route path="/fees" element={<Fees />}></Route>
       <Route path="/fees/clinic" element={<FeeClinic />}></Route>
       <Route path="/payments" element={<Payments />}></Route>

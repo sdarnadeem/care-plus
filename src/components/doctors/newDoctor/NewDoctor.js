@@ -1,6 +1,18 @@
 import React from "react";
 
-import { Stack, Typography, TextField, Box } from "@mui/material";
+import {
+  Stack,
+  Typography,
+  TextField,
+  Box,
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+  Button,
+  Grid,
+} from "@mui/material";
 import { FileUploader } from "react-drag-drop-files";
 
 import c from "./NewDoctor.module.css";
@@ -85,6 +97,7 @@ const NewDoctor = () => {
           id="filled-basic"
           variant="outlined"
           size="small"
+          width={{ xs: "100%" }}
           sx={{
             border: "1px solid black",
             borderRadius: "4px",
@@ -221,27 +234,29 @@ const NewDoctor = () => {
           width="332px !important"
           placeholder="Mobile Number"
         />
-        <Box
-          sx={{
-            border: "1px solid black",
-            padding: "10px",
-            marginBottom: "20px",
-            marginRight: "20px",
-          }}
-        >
-          <Stack direction="column" spacing={1}>
-            <Typography variant="body1">Upload Profile Picture</Typography>
-            <FileUploader
-              multiple={false}
-              handleChange={handleChange}
-              name="file"
-              types={fileTypes}
-            />
-            <Typography variant="caption">
-              {file ? `File name: ${file[0].name}` : "no files uploaded yet"}
-            </Typography>
-          </Stack>
-        </Box>
+        <Grid container>
+          <Box
+            sx={{
+              border: "1px solid black",
+              padding: "10px",
+              marginBottom: "20px",
+              marginRight: "20px",
+            }}
+          >
+            <Stack direction="column" spacing={1}>
+              <Typography variant="body1">Upload Profile Picture</Typography>
+              <FileUploader
+                multiple={false}
+                handleChange={handleChange}
+                name="file"
+                types={fileTypes}
+              />
+              <Typography variant="caption">
+                {file ? `File name: ${file[0].name}` : "no files uploaded yet"}
+              </Typography>
+            </Stack>
+          </Box>
+        </Grid>
         <TextField
           id="outlined-multiline-flexible"
           variant="outlined"
@@ -249,6 +264,7 @@ const NewDoctor = () => {
           size="small"
           multiline={true}
           maxRows={4}
+          marginRight={{ sm: "10px" }}
           sx={{
             border: "1px solid rgba(0, 0, 0, 0.87)",
             borderRadius: "4px",
@@ -262,23 +278,27 @@ const NewDoctor = () => {
 
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DatePicker
-            label="Date of Birth"
             value={value}
             placeholder="Date of Birth"
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            size="small"
-            style={{
-              border: "1px solid black",
-              borderRadius: "4px",
-              width: "500px",
-              marginBottom: "20px",
-              marginRight: "20px !important",
-            }}
-            renderInput={(params) => <TextField {...params} />}
+            renderInput={(params) => (
+              <TextField
+                size="small"
+                sx={{
+                  border: "1px solid black",
+                  borderRadius: "4px",
+                  width: "500px",
+                  marginBottom: "20px",
+                  marginRight: "20px !important",
+                }}
+                {...params}
+              />
+            )}
           />
         </LocalizationProvider>
+        <br />
         <TextField
           id="filled-basic"
           variant="outlined"
@@ -293,6 +313,80 @@ const NewDoctor = () => {
           width="332px !important"
           placeholder="Blood Group"
         />
+        <Grid container>
+          <FormControl
+            sx={{
+              marginBottom: "30px",
+              marginRight: "20px",
+            }}
+          >
+            <FormLabel id="demo-row-radio-buttons-group-label">
+              Gender
+            </FormLabel>
+            <RadioGroup
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+            >
+              <FormControlLabel
+                value="female"
+                control={<Radio />}
+                label="Female"
+              />
+              <FormControlLabel value="male" control={<Radio />} label="Male" />
+              <FormControlLabel
+                value="other"
+                control={<Radio />}
+                label="Other"
+              />
+            </RadioGroup>
+          </FormControl>
+        </Grid>
+        <br></br>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          marginBottom={3}
+        >
+          <Button
+            sx={{
+              width: "90px",
+              height: "33px",
+              background: "#F6F6FF",
+              border: "1px solid #3E4095",
+              borderRadius: "64px",
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "16px",
+              lineHeight: "20px",
+              marginRight: "10px",
+            }}
+            variant="filled"
+          >
+            Reset
+          </Button>
+          <Button
+            sx={{
+              width: "90px",
+              height: "33px",
+              background:
+                "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+              border: "1px solid #3E4095",
+              borderRadius: "64px",
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "16px",
+              lineHeight: "20px",
+              color: "#fff",
+            }}
+            variant="filled"
+          >
+            Submit
+          </Button>
+        </Grid>
       </Stack>
     </>
   );

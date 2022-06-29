@@ -11,9 +11,9 @@ import {
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-import c from "./SingleDoctor.module.css";
+import c from "./SingleClinic.module.css";
 
-const SingleDoctor = ({ image, name, hospital }) => {
+const SingleClinic = ({ image, name, hospital }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -97,4 +97,4 @@ const SingleDoctor = ({ image, name, hospital }) => {
   );
 };
 
-export default SingleDoctor;
+export default SingleClinic;

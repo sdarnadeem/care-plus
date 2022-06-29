@@ -1,12 +1,14 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import BiotechIcon from "@mui/icons-material/Biotech";
 import GroupIcon from "@mui/icons-material/Group";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import PaymentIcon from "@mui/icons-material/Payment";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
 import BookIcon from "@mui/icons-material/Book";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LogoutIcon from "@mui/icons-material/Logout";
+import DomainAddIcon from "@mui/icons-material/DomainAdd";
 
 const content = [
   {
@@ -29,12 +31,8 @@ const content = [
         slug: "all-clinics",
       },
       {
-        text: "Online Clinics",
-        slug: "online-clinics",
-      },
-      {
-        text: "Block Clinics",
-        slug: "block-clinics",
+        text: "Diagnostic Center",
+        slug: "diagnostic-center",
       },
     ],
   },
@@ -42,7 +40,28 @@ const content = [
     icon: GroupIcon,
     text: "Doctors",
     slug: "doctors",
-    items: [{ text: "Add Doctor", slug: "add-doctor" }],
+    items: [
+      { text: "Doctor List", slug: "doctor-list" },
+      { text: "Add Doctor", slug: "add-doctor" },
+    ],
+  },
+  {
+    icon: CalendarMonthIcon,
+    text: "Doctors Schedule",
+    slug: "doctor-schedule",
+    items: [
+      { text: "Schedule List", slug: "schedule-list" },
+      { text: "Add Schedule", slug: "add-schedule" },
+    ],
+  },
+  {
+    icon: DomainAddIcon,
+    text: "Department",
+    slug: "department",
+    items: [
+      { text: "Department List", slug: "department-list" },
+      { text: "Add Department", slug: "add-department" },
+    ],
   },
   {
     icon: AttachMoneyIcon,

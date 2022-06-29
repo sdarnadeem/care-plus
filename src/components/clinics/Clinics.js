@@ -1,3 +1,102 @@
+import React from "react";
+import SingleClinic from "./singleClinic/SingleClinic";
+
+import { Box, Grid, Pagination, Stack, Typography } from "@mui/material";
+
+const Clinics = () => {
+  return (
+    <Stack direction="column">
+      <Stack direction="row">
+        <Box
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            display: "flex",
+            width: 140,
+            height: 31,
+            background:
+              "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+            borderRadius: "64px",
+          }}
+          margin={{
+            lg: "10px 30px",
+            md: "5xp 10px",
+            sm: "5px 10px",
+            xs: "5px 10px",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "#fff",
+            }}
+          >
+            Clinics's List
+          </Typography>
+        </Box>
+        <Box
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            display: "flex",
+            width: 140,
+            height: 31,
+            background:
+              "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+            borderRadius: "64px",
+          }}
+          margin={{
+            lg: "10px 10px",
+            md: "5xp 10px",
+            sm: "5px 10px",
+            xs: "5px 10px",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "#fff",
+            }}
+          >
+            Add Clinic
+          </Typography>
+        </Box>
+      </Stack>
+      <Stack direction="column" maxWidth="100%">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
+          <SingleClinic
+            key={item + 3859}
+            image="https://images.unsplash.com/photo-1470075801209-17f9ec0cada6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnVpbGRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            name="Lady Minto / Gulf Islands Hospital"
+            hospital="Bangabandhu Sheikh Mujib Medical University Hospital"
+          />
+        ))}
+      </Stack>
+      <Grid
+        mt={2}
+        mb={3}
+        pr={5}
+        display="flex"
+        justifyContent="end"
+        sx={{ display: "flex", justifyContent: "flex-end", width: "100%" }}
+      >
+        <Pagination count={10} color="secondary" />
+      </Grid>
+    </Stack>
+  );
+};
+
+export default Clinics;
+
+/*
 import React, { useMemo, useCallback, useRef } from "react";
 import { Typography, Grid, Button, Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -143,7 +242,7 @@ const Clinics = () => {
             }}
             variant="outlined"
           />
-        </Grid> */}
+        </Grid> 
         <Grid item>
           <Button
             variant="outlined"
@@ -237,3 +336,5 @@ const Clinics = () => {
 };
 
 export default Clinics;
+
+*/
