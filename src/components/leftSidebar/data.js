@@ -42,7 +42,10 @@ const content = [
     icon: GroupIcon,
     text: "Doctors",
     slug: "doctors",
-    items: [{ text: "Add Doctor", slug: "add-doctor" }],
+    items: [
+      { text: "Doctor List", slug: "doctor-list" },
+      { text: "Add Doctor", slug: "add-doctor" },
+    ],
   },
   {
     icon: AttachMoneyIcon,

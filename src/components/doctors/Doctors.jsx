@@ -70,7 +70,7 @@ const Doctors = () => {
           </Typography>
         </Box>
       </Stack>
-      <Stack direction="row" sx={{ flexWrap: "wrap" }}>
+      <Stack direction="column" maxWidth="100%">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
           <SingleDoctor
             key={item + 3859}
@@ -82,6 +82,7 @@ const Doctors = () => {
       </Stack>
       <Grid
         mt={2}
+        mb={3}
         pr={5}
         display="flex"
         justifyContent="end"
