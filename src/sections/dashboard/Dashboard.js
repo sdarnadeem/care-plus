@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Grid container sx={{ flexWrap: "nowrap" }}>
+      <Grid container sx={{background: "#F6F6FF",  flexWrap: "nowrap"}}>
         <Grid
           item
           lg={showSidebar ? 2 : 0.5}
