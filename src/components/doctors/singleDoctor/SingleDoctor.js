@@ -25,7 +25,7 @@ const SingleDoctor = ({ image, name, hospital }) => {
   return (
     <Box
       sx={{
-        width: 304,
+        width: "100%",
         height: 113,
         borderRadius: "13.36px",
         border: "2px solid #0089FF",
@@ -43,7 +43,7 @@ const SingleDoctor = ({ image, name, hospital }) => {
         container
         direction="row"
         alignItems="center"
-        justifyContent="center"
+        // justifyContent="center"
         width="100%"
         height="100%"
         wrap="nowrap"

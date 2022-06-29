@@ -65,8 +65,8 @@ const content = [
     slug: "payments",
     items: [
       {
-        text: "Transactions",
-        slug: "transactions",
+        text: "Add",
+        slug: "add",
       },
       {
         text: "Admin Payment Details",

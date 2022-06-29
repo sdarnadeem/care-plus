@@ -38,7 +38,7 @@ const Doctors = () => {
             Doctor's List
           </Typography>
         </Box>
-        <Box
+        {/* <Box
           alignItems="center"
           justifyContent="center"
           sx={{
@@ -68,7 +68,7 @@ const Doctors = () => {
           >
             Add Doctor
           </Typography>
-        </Box>
+        </Box> */}
       </Stack>
       <Stack direction="row" sx={{ flexWrap: "wrap" }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (

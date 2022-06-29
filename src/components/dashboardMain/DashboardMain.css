@@ -2,7 +2,7 @@
     overflow-x: hidden;
     display: flex;
 }
-.img{
+.imgdas{
   /* position: absolute; */
   width: 56px;
   height: 56px;
@@ -16,7 +16,7 @@
       width: fit-content;
       overflow-x: hidden !important;
      }
-     .main-content{
+     .main-contentt{
       max-width: 50% !important;
       overflow-x: hidden !important;
      }

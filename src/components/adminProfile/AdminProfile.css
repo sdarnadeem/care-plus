@@ -1,0 +1,8 @@
+.main-container{
+    display: flex;
+  justify-content: space-around !important;
+}
+.img{
+    height: 190px !important;
+    width: 250px;
+}

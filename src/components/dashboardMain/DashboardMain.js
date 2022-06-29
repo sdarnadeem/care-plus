@@ -7,7 +7,7 @@ import { FaBeer } from 'react-icons/fa';
 const DashboardMain = () => {
 
   return (
-    <div className="main-content">
+    <div className="main-contentt">
       <div className="col-md-10 bg-lg shadow mt-3 ms-5 ">
         <div className="row ">
           <div className="col-xl-3 col-lg-6">
@@ -18,7 +18,7 @@ const DashboardMain = () => {
                 </div>
                 <div className="mb-4 d-flex justify-content-between">
                   <h5 className="card-title mb-0">Total Doctors</h5>
-                  <i><img src="https://previews.123rf.com/images/bestvectorstock/bestvectorstock1808/bestvectorstock180813927/107223766-doctor-vector-icon-isolated-on-transparent-background-doctor-logo-concept.jpg" className="img" /></i>
+                  <i><img src="https://previews.123rf.com/images/bestvectorstock/bestvectorstock1808/bestvectorstock180813927/107223766-doctor-vector-icon-isolated-on-transparent-background-doctor-logo-concept.jpg" className="imgdas" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -56,7 +56,7 @@ const DashboardMain = () => {
                 </div>
                 <div className="mb-4 d-flex justify-content-between">
                   <h5 className="card-title mb-0">Patient</h5>
-                  <i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Pke_otputm7YhK-7y8ACs3iCyppJNbDWXg&usqp=CAU" className="img" /></i>
+                  <i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Pke_otputm7YhK-7y8ACs3iCyppJNbDWXg&usqp=CAU" className="imgdas" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -94,7 +94,7 @@ const DashboardMain = () => {
                 </div>
                 <div className="mb-4 d-flex justify-content-between">
                   <h5 className="card-title mb-0">Clinics</h5>
-                  <i><img src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png" className="img" /></i>
+                  <i><img src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png" className="imgdas" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
@@ -132,7 +132,7 @@ const DashboardMain = () => {
                 </div>
                 <div className="mb-4 d-flex justify-content-between">
                   <h5 className="card-title mb-0">Total Revenue</h5>
-                  <i><img src="https://icon2.cleanpng.com/20180403/hce/kisspng-revenue-computer-icons-business-profit-sales-income-5ac3f349f3aaa4.1202206815227912419981.jpg" className="img" /></i>
+                  <i><img src="https://icon2.cleanpng.com/20180403/hce/kisspng-revenue-computer-icons-business-profit-sales-income-5ac3f349f3aaa4.1202206815227912419981.jpg" className="imgdas" /></i>
                 </div>
                 <div className="row align-items-center mb-2 d-flex">
                   <div className="col-8">
