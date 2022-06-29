@@ -21,6 +21,8 @@ const Middle = () => {
       <Route path="/dashboard" element={<DashboardMain />} />
       <Route path="/patient" element={<Patient />}></Route>
       <Route path="/clinics" element={<Clinic />}></Route>
+      <Route path="/clinics/all-clinics" element={<Clinic />}></Route>
+      <Route path="/clinics/diagnostic-center" element={<Clinic />}></Route>
       <Route path="/doctors" element={<Doctor />}></Route>
       <Route path="/doctors/doctor-list" element={<Doctor />}></Route>
       <Route path="/doctors/add-doctor" element={<NewDoctor />}></Route>
