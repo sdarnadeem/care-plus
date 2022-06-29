@@ -42,7 +42,47 @@ const content = [
     icon: GroupIcon,
     text: "Doctors",
     slug: "doctors",
+    items: [{ text: "Add Doctor", slug: "add-doctor" }],
+  },
+  {
+    icon: AttachMoneyIcon,
+    text: "Fees",
+    slug: "fees",
+    items: [
+      {
+        text: "Clinic",
+        slug: "clinic",
+      },
+      {
+        text: "Doctor",
+        slug: "doctor",
+      },
+    ],
+  },
+  {
+    icon: PaymentIcon,
+    text: "Payments",
+    slug: "payments",
+    items: [
+      {
+        text: "Transactions",
+        slug: "transactions",
+      },
+      {
+        text: "Admin Payment Details",
+        slug: "admin-payment-details",
+      },
+      {
         text: "Payment Gateway Setting",
+        slug: "payment=gateway-setting",
+      },
+    ],
+  },
+  {
+    icon: CoPresentIcon,
+    text: "Commission",
+    slug: "commission",
+    items: [
       {
         text: "Clinic",
         slug: "clinics",
