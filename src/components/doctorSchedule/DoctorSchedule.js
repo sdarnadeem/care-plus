@@ -4,6 +4,7 @@ import React, { useMemo, useCallback } from "react";
 import { columns, rows } from "./doctorScheduleData";
 
 import c from "./DoctorSchedule.module.css";
+import "../../tableStyles.scss";
 
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
@@ -71,7 +72,7 @@ const DoctorSchedule = () => {
       </Stack>
       <div className="green-theme">
         <div
-          className="ag-theme-alpine"
+          className="ag-theme-custom-react"
           style={{ height: "80vh", width: "100%" }}
         >
           <AgGridReact
