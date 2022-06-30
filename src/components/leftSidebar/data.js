@@ -74,21 +74,6 @@ const content = [
     ],
   },
   {
-    icon: AttachMoneyIcon,
-    text: "Appointment",
-    slug: "appointment",
-    items: [
-      {
-        text: "Add Appointment",
-        slug: "addAppointment",
-      },
-      {
-        text: "Appointment List",
-        slug: "appointmentList",
-      },
-    ],
-  },
-  {
     icon: PaymentIcon,
     text: "Payments",
     slug: "payments",
