@@ -20,12 +20,9 @@ import Commission from "../commission/Commission";
 import AdminProfile from "../adminProfile/AdminProfile";
 import FeeClinic from "../appointment/AppointmentList";
 import AddPayment from "../payments/AddPayment";
-<<<<<<< HEAD
-=======
-import AppointmentList from "../appointment/AppointmentList";
-import AddAppointment from "../appointment/AddAppointment";
+// import AppointmentList from "../appointment/AppointmentList";
+// import AddAppointment from "../appointment/AddAppointment";
 import AddDoctor from "../doctorSchedule/addDoctor/AddDoctor";
->>>>>>> 50a25320c6c040a9401439f2888c3229bffc4832
 const Middle = () => {
   const params = useParams();
   console.log(params);
@@ -72,7 +69,10 @@ const Middle = () => {
       ></Route>
       {/* <Route path="/fees" element={<Fees />}></Route>
       <Route path="/fees/clinic" element={<FeeClinic />}></Route> */}
-        <Route path="/appointment" element={<Navigate replace to="/appointment/appointment-list" />}></Route>
+      <Route
+        path="/appointment"
+        element={<Navigate replace to="/appointment/appointment-list" />}
+      ></Route>
       <Route
         path="/appointment/appointment-list"
         element={<Appointment />}
@@ -81,14 +81,11 @@ const Middle = () => {
         path="/appointment/add-appointment"
         element={<AddAppointment />}
       ></Route>
-<<<<<<< HEAD
-=======
       <Route
         path="/doctor-schedule/add-schedule"
         element={<AddDoctor />}
       ></Route>
       <Route path="/appointment" element={<Appointment />}></Route>
->>>>>>> 50a25320c6c040a9401439f2888c3229bffc4832
       <Route path="/fees" element={<Fees />}></Route>
       <Route path="/fees/clinic" element={<FeeClinic />}></Route>
       <Route path="/payments" element={<Payments />}></Route>
