@@ -568,13 +568,8 @@ export default NewDoctor;
 
 */
 
-import React from 'react'
-import {
-  Typography,
-  Box,
-  Button,
-  Grid,
-} from "@mui/material";
+import React from "react";
+import { Typography, Box, Button, Grid } from "@mui/material";
 const NewDoctor = () => {
   return (
     <div>
@@ -585,8 +580,7 @@ const NewDoctor = () => {
           display: "flex",
           width: 140,
           height: 31,
-          background:
-            "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+          background: "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
           borderRadius: "64px",
         }}
         margin={{
@@ -609,141 +603,208 @@ const NewDoctor = () => {
           Add Appointment
         </Typography>
       </Box>
-      <section class="vh-100 gradient-custom w-100">
-        <div class="container py-0 h-100">
-          <div class="row ">
-            <div class="col-12 col-lg-9 col-xl-7">
-              <div class="main-form" style={{ borderRadius: "15px", width: "170%" }}>
-                <div class="card-body p-4 p-md-5">
-
+      <section className="vh-100 gradient-custom w-100">
+        <div className="container py-0 h-100">
+          <div className="row ">
+            <div className="col-12 col-lg-9 col-xl-7">
+              <div
+                className="main-form"
+                style={{ borderRadius: "15px", width: "170%" }}
+              >
+                <div className="card-body p-4 p-md-5">
                   <form>
-
-                    <div class="row">
-                      <div class="col-md-6 mb-4">
-
-                        <div class="form-outline">
-                          <input type="text" id="firstName" class="form-control form-control-lg" placeholder='Enter First Name' required />
+                    <div className="row">
+                      <div className="col-md-6 mb-4">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="firstName"
+                            className="form-control form-control-lg"
+                            placeholder="Enter First Name"
+                            required
+                          />
                         </div>
-
                       </div>
-                      <div class="col-md-6 mb-4">
-
-                        <div class="form-outline">
-                          <input type="text" id="lastName" class="form-control form-control-lg" placeholder='Enter Last Name' required />
+                      <div className="col-md-6 mb-4">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="lastName"
+                            className="form-control form-control-lg"
+                            placeholder="Enter Last Name"
+                            required
+                          />
                         </div>
+                      </div>
+                    </div>
 
+                    <div className="row">
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="emailAddress"
+                            className="form-control form-control-lg"
+                            placeholder="Enter E-mail"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="password"
+                            id="phoneNumber"
+                            className="form-control form-control-lg"
+                            placeholder="Create Password"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="text"
+                            className="form-control form-control-lg"
+                            placeholder="Designation"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="text"
+                            className="form-control form-control-lg"
+                            placeholder="Department"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="text"
+                            className="form-control form-control-lg"
+                            placeholder="Speciality"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="text"
+                            className="form-control form-control-lg"
+                            placeholder="Experience"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="text"
+                            className="form-control form-control-lg"
+                            placeholder="Address"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="phone"
+                            id="phone"
+                            className="form-control form-control-lg"
+                            placeholder="Mobile Number"
+                            maxLength={10}
+                            minLength={1}
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="file"
+                            id="file"
+                            className="form-control form-control-lg"
+                            placeholder="Doctors image"
+                            required
+                          />
+                        </div>
                       </div>
                     </div>
 
-
-
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="text" id="emailAddress" class="form-control form-control-lg" placeholder='Enter E-mail' required />
-                        </div>
-
-                      </div>
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="password" id="phoneNumber" class="form-control form-control-lg" placeholder='Create Password' required />
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="row">
-
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="text" id="text" class="form-control form-control-lg" placeholder='Designation' required />
-                        </div>
-
-                      </div>
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="text" id="text" class="form-control form-control-lg" placeholder="Department" required />
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="row">
-
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="text" id="text" class="form-control form-control-lg" placeholder="Speciality" required />
-                        </div>
-
-                      </div>
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="text" id="text" class="form-control form-control-lg" placeholder='Experience' required />
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="row">
-
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="text" id="text" class="form-control form-control-lg" placeholder='Address' required />
-                        </div>
-
-                      </div>
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="phone" id="phone" class="form-control form-control-lg" placeholder='Mobile Number' maxLength={10} minLength={1} required />
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="row">
-
-                      <div class="col-md-6 mb-4 pb-2">
-
-                        <div class="form-outline">
-                          <input type="file" id="file" class="form-control form-control-lg" placeholder='Doctors image' required />
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <textarea class="form-control" id="form4Example3" rows="4" placeholder='Short Biography' required></textarea>
+                    <div className="form-outline mb-4">
+                      <textarea
+                        className="form-control"
+                        id="form4Example3"
+                        rows="4"
+                        placeholder="Short Biography"
+                        required
+                      ></textarea>
                     </div>
                     {/* gender */}
-                    <div class="row">
+                    <div className="row">
+                      <div className="col-md-6 mb-4">
+                        <h6 className="mb-2 pb-1">Gender: </h6>
 
-                      <div class="col-md-6 mb-4">
-
-                        <h6 class="mb-2 pb-1">Gender: </h6>
-
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                            value="option1" checked />
-                          <label class="form-check-label" for="femaleGender">Female</label>
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="femaleGender"
+                            value="option1"
+                          />
+                          <label
+                            className="form-check-label"
+                            for="femaleGender"
+                          >
+                            Female
+                          </label>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                            value="option2" />
-                          <label class="form-check-label" for="maleGender">Male</label>
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="maleGender"
+                            value="option2"
+                          />
+                          <label className="form-check-label" for="maleGender">
+                            Male
+                          </label>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                            value="option3" />
-                          <label class="form-check-label" for="otherGender">Other</label>
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="otherGender"
+                            value="option3"
+                          />
+                          <label className="form-check-label" for="otherGender">
+                            Other
+                          </label>
                         </div>
-
                       </div>
                     </div>
                     {/* gender */}
@@ -791,16 +852,15 @@ const NewDoctor = () => {
                         Submit
                       </Button>
                     </Grid>
-
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section >
-    </div >
-  )
-}
+      </section>
+    </div>
+  );
+};
 
-export default NewDoctor
+export default NewDoctor;
