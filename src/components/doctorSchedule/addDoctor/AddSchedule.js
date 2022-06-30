@@ -103,7 +103,6 @@ const AddSchedule = () => {
                             name="inlineRadioOptions"
                             id="femaleGender"
                             value="option1"
-                            checked
                           />
                           <label
                             className="form-check-label"
