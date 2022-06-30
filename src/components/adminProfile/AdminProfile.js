@@ -213,7 +213,10 @@ const AdminProfile = () => {
                           value="option1"
                           checked
                         />
-                        <label className="form-check-label" for="femaleGender">
+                        <label
+                          className="form-check-label"
+                          htmlFor="femaleGender"
+                        >
                           Female
                         </label>
                       </div>
@@ -226,7 +229,10 @@ const AdminProfile = () => {
                           id="maleGender"
                           value="option2"
                         />
-                        <label className="form-check-label" for="maleGender">
+                        <label
+                          className="form-check-label"
+                          htmlFor="maleGender"
+                        >
                           Male
                         </label>
                       </div>
@@ -239,7 +245,10 @@ const AdminProfile = () => {
                           id="otherGender"
                           value="option3"
                         />
-                        <label className="form-check-label" for="otherGender">
+                        <label
+                          className="form-check-label"
+                          htmlFor="otherGender"
+                        >
                           Other
                         </label>
                       </div>
