@@ -20,6 +20,7 @@ import FeeClinic from "../appointment/AppointmentList";
 import AddPayment from "../payments/AddPayment";
 import AppointmentList from "../appointment/AppointmentList";
 import AddAppointment from "../appointment/AddAppointment";
+import AddDoctor from "../doctorSchedule/addDoctor/AddDoctor";
 const Middle = () => {
   const params = useParams();
   console.log(params);
@@ -61,6 +62,10 @@ const Middle = () => {
       <Route
         path="/appointment/addAppointment"
         element={<AddAppointment />}
+      ></Route>
+      <Route
+        path="/doctor-schedule/add-schedule"
+        element={<AddDoctor />}
       ></Route>
       <Route path="/appointment" element={<Appointment />}></Route>
       <Route path="/fees" element={<Fees />}></Route>
