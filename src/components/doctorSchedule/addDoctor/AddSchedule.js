@@ -106,7 +106,7 @@ const AddSchedule = () => {
                           />
                           <label
                             className="form-check-label"
-                            for="femaleGender"
+                            htmlFor="femaleGender"
                           >
                             Active
                           </label>
@@ -120,7 +120,10 @@ const AddSchedule = () => {
                             id="maleGender"
                             value="option2"
                           />
-                          <label className="form-check-label" for="maleGender">
+                          <label
+                            className="form-check-label"
+                            htmlFor="maleGender"
+                          >
                             Inactive
                           </label>
                         </div>
