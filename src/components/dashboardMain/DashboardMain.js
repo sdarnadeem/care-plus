@@ -3,7 +3,6 @@ import AppointmentOverview from "./AppointmentOverview";
 import PatientOverView from "./PatientOverView";
 import PieData from "./PieData";
 import "../dashboardMain/DashboardMain.css";
-import { FaBeer } from "react-icons/fa";
 
 const DashboardMain = () => {
   let img = [
@@ -50,7 +49,7 @@ const DashboardMain = () => {
                     <div className="mb-4 d-flex justify-content-between">
                       <h5 className="card-title mb-0">{data.title}</h5>
                       <i>
-                        <img src={data.img} className="imgdas" />
+                        <img src={data.img} className="imgdas" alt="data" />
                       </i>
                     </div>
                     <div className="row align-items-center mb-2 d-flex">
