@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import DashboardMain from "../dashboardMain/DashboardMain";
@@ -13,7 +13,7 @@ import NewDepartment from "../department/newDepartment/NewDepartment";
 import Fees from "../appointment/Fees";
 import Appointment from "../appointment/Appointment";
 import AddAppointment from "../appointment/AddAppointment";
-import Report from "../report/Report"
+import Report from "../report/Report";
 // import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
 import Commission from "../commission/Commission";
@@ -25,16 +25,25 @@ const Middle = () => {
   console.log(params);
   return (
     <Routes>
-      <Route path="/" element={<DashboardMain />} />
+      <Route path="/" element={<Navigate replace to="/dashboard" />} />
       <Route path="/dashboard" element={<DashboardMain />} />
       <Route path="/patient" element={<Patient />}></Route>
-      <Route path="/clinics" element={<Clinic />}></Route>
+      <Route
+        path="/clinics"
+        element={<Navigate replace to="/clinics/all-clinics" />}
+      ></Route>
       <Route path="/clinics/all-clinics" element={<Clinic />}></Route>
       <Route path="/clinics/diagnostic-center" element={<Clinic />}></Route>
-      <Route path="/doctors" element={<Doctor />}></Route>
+      <Route
+        path="/doctors"
+        element={<Navigate replace to="/doctors/doctor-list" />}
+      ></Route>
       <Route path="/doctors/doctor-list" element={<Doctor />}></Route>
       <Route path="/doctors/add-doctor" element={<NewDoctor />}></Route>
-      <Route path="/doctor-schedule" element={<DoctorSchedule />}></Route>
+      <Route
+        path="/doctor-schedule"
+        element={<Navigate replace to="/doctors-schedule/schedule-list" />}
+      ></Route>
       <Route
         path="/doctors-schedule/schedule-list"
         element={<DoctorSchedule />}
@@ -43,7 +52,10 @@ const Middle = () => {
         path="/doctors-schedule/add-schedule"
         element={<DoctorSchedule />}
       ></Route>
-      <Route path="/department" element={<Department />}></Route>
+      <Route
+        path="/department"
+        element={<Navigate replace to="/department/department-list" />}
+      ></Route>
       <Route
         path="/department/department-list"
         element={<Department />}
@@ -54,6 +66,7 @@ const Middle = () => {
       ></Route>
       {/* <Route path="/fees" element={<Fees />}></Route>
       <Route path="/fees/clinic" element={<FeeClinic />}></Route> */}
+        <Route path="/appointment" element={<Navigate replace to="/appointment/appointment-list" />}></Route>
       <Route
         path="/appointment/appointment-list"
         element={<Appointment />}
@@ -62,7 +75,6 @@ const Middle = () => {
         path="/appointment/add-appointment"
         element={<AddAppointment />}
       ></Route>
-      <Route path="/appointment" element={<Appointment />}></Route>
       <Route path="/fees" element={<Fees />}></Route>
       <Route path="/fees/clinic" element={<FeeClinic />}></Route>
       <Route path="/payments" element={<Payments />}></Route>
