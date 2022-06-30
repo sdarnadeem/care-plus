@@ -24,7 +24,6 @@ export default function SidebarItem({
 }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const regexForTab = new RegExp(`^/${slug}`, "i");
   const result = regexForTab.test(pathname);
@@ -87,7 +86,7 @@ export default function SidebarItem({
             </Typography>
           </Stack>
         </AccordionSummary>
-        {items && items.length > 0 && (
+        {showSidebar && items && items.length > 0 && (
           <AccordionDetails>
             <Stack
               direction="column"

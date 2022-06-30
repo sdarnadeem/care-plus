@@ -19,6 +19,7 @@ const LeftSidebar = ({ handleSidebar }) => {
     setShowSidebar((prev) => !prev);
     handleSidebar();
   };
+
   return (
     <Paper elevation={1} sx={{ minHeight: "100vh !important" }}>
       {data.map((item, index) => (
