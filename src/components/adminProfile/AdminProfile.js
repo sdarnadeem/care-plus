@@ -110,7 +110,7 @@ const AdminProfile = () => {
         </Typography>
       </Box>
       <section class="vh-100 gradient-custom w-100">
-        <div class="container py-5 h-100">
+        <div class="container py-0 h-100">
           <div class="row ">
             <div class="col-12 col-lg-9 col-xl-7">
               <div class="main-form" style={{ borderRadius: "15px", width: "150%" }}>
@@ -166,7 +166,7 @@ const AdminProfile = () => {
                         <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
                       </div> */}
                     </form>
-                    <div style={{ marginLeft: "150px" }}>
+                    <div style={{ marginLeft: "150px" }} className="admin-img">
                       <img src="https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt='logo' className='img img-fluid' width="200px" height="auto" />
                       <p className='fs-3'>Ashish Verma</p>
                     </div>

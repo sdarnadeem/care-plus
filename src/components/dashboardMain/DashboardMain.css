@@ -17,7 +17,13 @@
       overflow-x: hidden !important;
      }
      .main-contentt{
-      max-width: 50% !important;
+      /* max-width: 50% !important; */
       overflow-x: hidden !important;
      }
+  }
+  @media screen and (min-width: 700px) and (max-width:2000px) {
+    .pie
+    {
+      padding-left: 51px;
+    }
   }

@@ -65,16 +65,16 @@ const content = [
   },
   {
     icon: AttachMoneyIcon,
-    text: "Fees",
-    slug: "fees",
+    text: "Appointment",
+    slug: "appointment",
     items: [
       {
-        text: "Clinic",
-        slug: "clinic",
+        text: "Add Appointment",
+        slug: "addAppointment",
       },
       {
-        text: "Doctor",
-        slug: "doctor",
+        text: "Appointment List",
+        slug: "appointmentList",
       },
     ],
   },

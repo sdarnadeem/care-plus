@@ -16,8 +16,13 @@ const ChartBar = () => {
         { name: "Dec", value: "130" },
     ]
     return (
-        <div>
-            <div className='d-flex justify-content-between'>
+        <div style={{
+            maxWidth: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+        }}>
+            <div className='d-flex justify-content-between' style={{ width: "74%" }}>
                 <h6>Appointment overview</h6>
                 <p>24.5 M</p>
             </div>
@@ -28,7 +33,6 @@ const ChartBar = () => {
                 margin={{
                     top: 5,
                     right: 30,
-                    left: 20,
                     bottom: 5,
                 }}
                 barSize={20}

@@ -126,13 +126,41 @@
 // export default Payments;
 
 import React from 'react'
-
+import { Box, Typography } from "@mui/material";
 const Payments = () => {
   return (
     <div>
-      <div className='mb-3 ms-3 mt-3' style={{ border: "1px solid black", width: "150px", borderRadius: "15px", backgroundColor: "#54E6D8" }}>
-        <h5 className='ms-3 mt-2 mx-auto'>Patient List</h5>
-      </div>
+      <Box
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          display: "flex",
+          width: 140,
+          height: 31,
+          background:
+            "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+          borderRadius: "64px",
+        }}
+        margin={{
+          lg: "10px 30px",
+          md: "5xp 10px",
+          sm: "5px 10px",
+          xs: "5px 10px",
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: "Montserrat",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "13px",
+            lineHeight: "16px",
+            color: "#fff",
+          }}
+        >
+          Payments
+        </Typography>
+      </Box>
       <table class="table" >
         <thead style={{ backgroundColor: " linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)" }}>
           <tr>
