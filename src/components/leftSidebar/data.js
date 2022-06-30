@@ -2,7 +2,6 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import BiotechIcon from "@mui/icons-material/Biotech";
 import GroupIcon from "@mui/icons-material/Group";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import PaymentIcon from "@mui/icons-material/Payment";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
 import BookIcon from "@mui/icons-material/Book";
@@ -10,6 +9,7 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LogoutIcon from "@mui/icons-material/Logout";
 import DomainAddIcon from "@mui/icons-material/DomainAdd";
 import BookOnlineIcon from "@mui/icons-material/BookOnline";
+import ReportIcon from "@mui/icons-material/Report";
 
 const content = [
   {
@@ -104,6 +104,21 @@ const content = [
       {
         text: "Doctor",
         slug: "doctors",
+      },
+    ],
+  },
+  {
+    icon: ReportIcon,
+    text: "Report",
+    slug: "report",
+    items: [
+      {
+        text: "Patient Wise Report",
+        slug: "patient-wise",
+      },
+      {
+        text: "Doctor Wise Report",
+        slug: "doctor-wise",
       },
     ],
   },

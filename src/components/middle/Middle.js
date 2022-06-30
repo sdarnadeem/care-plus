@@ -13,6 +13,7 @@ import NewDepartment from "../department/newDepartment/NewDepartment";
 import Fees from "../appointment/Fees";
 import Appointment from "../appointment/Appointment";
 import AddAppointment from "../appointment/AddAppointment";
+import Report from "../report/Report"
 // import Fees from "../fees/Fees";
 import Payments from "../payments/Payments";
 import Commission from "../commission/Commission";
@@ -67,6 +68,7 @@ const Middle = () => {
       <Route path="/payments" element={<Payments />}></Route>
       <Route path="/payments/add" element={<AddPayment />}></Route>
       <Route path="/commission" element={<Commission />}></Route>
+      <Route path="/report" element={<Report />}></Route>
       <Route path="/admin-profile" element={<AdminProfile />}></Route>
     </Routes>
   );
