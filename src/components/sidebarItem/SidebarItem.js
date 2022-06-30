@@ -24,7 +24,6 @@ export default function SidebarItem({
 }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const regexForTab = new RegExp(`^/${slug}`, "i");
   const result = regexForTab.test(pathname);
@@ -66,7 +65,6 @@ export default function SidebarItem({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
           style={{ height: "48px !important" }}
-          disableGutters
           className={summaryClass}
         >
           <Stack
@@ -87,7 +85,7 @@ export default function SidebarItem({
             </Typography>
           </Stack>
         </AccordionSummary>
-        {items && items.length > 0 && (
+        {showSidebar && items && items.length > 0 && (
           <AccordionDetails>
             <Stack
               direction="column"
@@ -107,7 +105,7 @@ export default function SidebarItem({
                 >
                   <ArrowForwardIcon fontSize="small" />
                   <Typography
-                    className={!showSidebar && c.hide}
+                    className={!showSidebar ? c.hide : ""}
                     variant="body2"
                   >
                     {item.text}

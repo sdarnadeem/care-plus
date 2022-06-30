@@ -1,13 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./sections/header/Header";
+import Login from "./sections/login/Login";
 import Dashboard from "./sections/dashboard/Dashboard";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Dashboard />
-    </>
+    <Routes>
+      <Route path="/*" element={<Dashboard />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
 

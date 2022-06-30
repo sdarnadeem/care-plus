@@ -4,16 +4,20 @@ import { Grid } from "@mui/material";
 
 import LeftSidebar from "../../components/leftSidebar/LeftSidebar";
 import Middle from "../../components/middle/Middle";
+import Header from "../header/Header";
 
 const Dashboard = () => {
   const [showSidebar, setShowSidebar] = React.useState(true);
+
   const handleSidebar = () => {
     setShowSidebar((prev) => !prev);
   };
 
   return (
     <>
-      <Grid container sx={{background: "#F6F6FF",  flexWrap: "nowrap"}}>
+      <Header />
+
+      <Grid container sx={{ background: "#F6F6FF", flexWrap: "nowrap" }}>
         <Grid
           item
           lg={showSidebar ? 2 : 0.5}
