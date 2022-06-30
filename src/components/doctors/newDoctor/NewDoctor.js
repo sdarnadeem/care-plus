@@ -774,7 +774,7 @@ const NewDoctor = () => {
                           />
                           <label
                             className="form-check-label"
-                            for="femaleGender"
+                            htmlFor="femaleGender"
                           >
                             Female
                           </label>
@@ -788,7 +788,10 @@ const NewDoctor = () => {
                             id="maleGender"
                             value="option2"
                           />
-                          <label className="form-check-label" for="maleGender">
+                          <label
+                            className="form-check-label"
+                            htmlFor="maleGender"
+                          >
                             Male
                           </label>
                         </div>
@@ -801,7 +804,10 @@ const NewDoctor = () => {
                             id="otherGender"
                             value="option3"
                           />
-                          <label className="form-check-label" for="otherGender">
+                          <label
+                            className="form-check-label"
+                            htmlFor="otherGender"
+                          >
                             Other
                           </label>
                         </div>
