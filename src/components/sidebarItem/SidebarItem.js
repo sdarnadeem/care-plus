@@ -105,7 +105,7 @@ export default function SidebarItem({
                 >
                   <ArrowForwardIcon fontSize="small" />
                   <Typography
-                    className={!showSidebar && c.hide}
+                    className={!showSidebar ? c.hide : ""}
                     variant="body2"
                   >
                     {item.text}
