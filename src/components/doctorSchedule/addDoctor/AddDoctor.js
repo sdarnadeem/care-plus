@@ -214,7 +214,7 @@ const AddDoctor = () => {
                                                 open={open}
                                                 onClose={handleClose}
                                                 TransitionComponent={Fade}
-                                                className="threeDot"
+                                               
                                             >
                                                 <MenuItem onClick={handleClose}>Edit</MenuItem>
                                                 <MenuItem onClick={handleClose}>Delete</MenuItem>

@@ -15,5 +15,35 @@
 .threeDot{
     position: absolute;
     top: 10%;
-    left: 38%;
+    left: 37%;
 }
+@media screen and (min-width:250px) and (max-width:900px) {
+    .main-form{
+     max-width:100% !important
+    }
+    .threeDot{
+        position: absolute;
+        top: 10%;
+        left: 70%;
+    }
+   }
+@media screen and (min-width:500px) and (max-width:1400px) {
+    .main-form{
+     max-width:100% !important
+    }
+    .threeDot{
+        position: absolute;
+        top: 6%;
+        left: 42% !important;
+    }
+   }
+@media screen and (min-width:912px) and (max-width:1400px) {
+    .main-form{
+     max-width:100% !important
+    }
+    .threeDot{
+        position: absolute;
+        top: 6%;
+        left: 57% !important;
+    }
+   }

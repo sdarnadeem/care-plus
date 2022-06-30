@@ -90,7 +90,7 @@ const DashboardMain = () => {
         </div>
       </div>
       <div className="main-chart">
-        <div className="mt-5 m-2 col-6 col-md-4" style={{ width: "50%" }}>
+        <div className=" m-2 col-6 col-md-4 bg-lg shadow" style={{ width: "50%" }}>
           <div >
             <AppointmentOverview/>
           </div>
@@ -115,7 +115,7 @@ const DashboardMain = () => {
               style={{
                 height: "30px",
                 width: "50px",
-                backgroundColor: "red",
+                backgroundColor: "#5A6DE7",
                 marginTop: "2px",
               }}
             ></div>
@@ -132,7 +132,7 @@ const DashboardMain = () => {
               style={{
                 height: "30px",
                 width: "50px",
-                backgroundColor: "red",
+                backgroundColor: "#F53542",
                 marginTop: "2px",
               }}
             ></div>
@@ -149,7 +149,7 @@ const DashboardMain = () => {
               style={{
                 height: "30px",
                 width: "50px",
-                backgroundColor: "red",
+                backgroundColor: "#F8727B",
                 marginTop: "2px",
               }}
             ></div>
@@ -166,7 +166,7 @@ const DashboardMain = () => {
               style={{
                 height: "30px",
                 width: "50px",
-                backgroundColor: "red",
+                backgroundColor: "#FEDEBC",
                 marginTop: "2px",
               }}
             ></div>

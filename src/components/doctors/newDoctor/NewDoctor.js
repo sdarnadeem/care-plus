@@ -575,6 +575,7 @@ import {
   Button,
   Grid,
 } from "@mui/material";
+import "../newDoctor/NewDoctor.css"
 const NewDoctor = () => {
   return (
     <div>

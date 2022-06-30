@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Typography } from "@mui/material";
+import '../appointment/AddAppointment.css'
 const AddAppointment = () => {
     return (
         <div>

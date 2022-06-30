@@ -5,9 +5,10 @@ import c from "./SinglePatient.module.css";
 
 const SinglePatient = ({ image, name, diagnostic, bloodGroup }) => {
   return (
+ 
     <Box
       sx={{
-        width: "100%",
+        width: "80%",
         height: 113,
         borderRadius: "13.36px",
         border: "2px solid #0089FF",
@@ -73,6 +74,7 @@ const SinglePatient = ({ image, name, diagnostic, bloodGroup }) => {
         </Grid>
       </Grid>
     </Box>
+    
   );
 };
 
