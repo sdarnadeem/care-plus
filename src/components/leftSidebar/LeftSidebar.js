@@ -39,16 +39,9 @@ const LeftSidebar = ({ handleSidebar }) => {
         title={showSidebar ? "Collapse Sidebar" : "Expand Sidebar"}
         sx={{ float: "right", cursor: "pointer" }}
       >
-        <IconButton>
-          {showSidebar && (
-            <ArrowLeftIcon fontSize="large" onClick={handleSidebarVisibility} />
-          )}
-          {!showSidebar && (
-            <ArrowRightIcon
-              fontSize="large"
-              onClick={handleSidebarVisibility}
-            />
-          )}
+        <IconButton onClick={handleSidebarVisibility}>
+          {showSidebar && <ArrowLeftIcon fontSize="large" />}
+          {!showSidebar && <ArrowRightIcon fontSize="large" />}
         </IconButton>
       </Tooltip>
     </Paper>
