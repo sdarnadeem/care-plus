@@ -1,36 +1,29 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-
-
-import Clinic from "../clinics/Clinics";
-import Doctor from "../doctors/Doctors";
-import NewDoctor from "../doctors/newDoctor/NewDoctor";
-import DoctorSchedule from "../doctorSchedule/DoctorSchedule";
-import Department from "../department/Department";
-import NewDepartment from "../department/newDepartment/NewDepartment";
-import Fees from "../appointment/Fees";
-import Appointment from "../appointment/Appointment";
-import AddAppointment from "../appointment/AddAppointment";
-import Report from "../report/Report";
-// import Fees from "../fees/Fees";
-import Payments from "../payments/Payments";
-import Commission from "../commission/Commission";
-import AdminProfile from "../adminProfile/AdminProfile";
-import FeeClinic from "../appointment/AppointmentList";
-import AddPayment from "../payments/AddPayment";
-// import AppointmentList from "../appointment/AppointmentList";
-// import AddAppointment from "../appointment/AddAppointment";
-import AddDoctor from "../doctorSchedule/addDoctor/AddDoctor";
-
 import Spinner from "../spinner/Spinner";
 
-const DashboardMain = React.lazy(() =>
-  import("../dashboardMain/DashboardMain")
-);
-const Patient = React.lazy(() =>
-  import("../patient/Patient")
-);
+const DashboardMain = React.lazy(() => import("../dashboardMain/DashboardMain"));
+const Patient = React.lazy(() =>import("../patient/Patient"));
+const Clinic = React.lazy(() =>  import("../clinics/Clinics"));
+const Doctor = React.lazy(() =>  import("../doctors/Doctors"));
+const NewDoctor = React.lazy(() =>  import("../doctors/newDoctor/NewDoctor"));
+const DoctorSchedule = React.lazy(() => import("../doctorSchedule/DoctorSchedule"));
+const Department = React.lazy(() => import("../department/Department"));
+const NewDepartment = React.lazy(() => import("../department/newDepartment/NewDepartment"));
+const Fees = React.lazy(() => import("../appointment/Fees"));
+const Appointment = React.lazy(() => import("../appointment/Appointment"));
+const AddAppointment = React.lazy(() => import("../appointment/AddAppointment"));
+const Report = React.lazy(() => import("../report/Report"));
+const Payments = React.lazy(() => import("../payments/Payments"));
+const Commission = React.lazy(() => import("../commission/Commission"));
+const AdminProfile = React.lazy(() => import("../adminProfile/AdminProfile"));
+const FeeClinic = React.lazy(() => import("../appointment/AppointmentList"));
+const AddPayment = React.lazy(() => import("../payments/AddPayment"));
+const AddDoctor = React.lazy(() => import("../doctorSchedule/addDoctor/AddDoctor"));
+
+
+
 
 const Middle = () => {
   const params = useParams();
