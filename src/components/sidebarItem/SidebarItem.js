@@ -65,7 +65,6 @@ export default function SidebarItem({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
           style={{ height: "48px !important" }}
-          disableGutters
           className={summaryClass}
         >
           <Stack
