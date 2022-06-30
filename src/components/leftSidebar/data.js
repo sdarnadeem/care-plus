@@ -9,6 +9,7 @@ import BookIcon from "@mui/icons-material/Book";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LogoutIcon from "@mui/icons-material/Logout";
 import DomainAddIcon from "@mui/icons-material/DomainAdd";
+import BookOnlineIcon from "@mui/icons-material/BookOnline";
 
 const content = [
   {
@@ -61,6 +62,15 @@ const content = [
     items: [
       { text: "Department List", slug: "department-list" },
       { text: "Add Department", slug: "add-department" },
+    ],
+  },
+  {
+    icon: BookOnlineIcon,
+    text: "Appointment",
+    slug: "appointment",
+    items: [
+      { text: "Appointment List", slug: "appointment-list" },
+      { text: "Add Appointment", slug: "add-appointment" },
     ],
   },
   {
