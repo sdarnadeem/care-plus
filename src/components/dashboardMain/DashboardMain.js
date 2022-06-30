@@ -1,5 +1,6 @@
 import React from "react";
-import ChartBar from "./ChartBar";
+import AppointmentOverview from "./AppointmentOverview"
+import PatientOverView from "./PatientOverView"
 import PieData from "./PieData";
 import "../dashboardMain/DashboardMain.css"
 import { FaBeer } from 'react-icons/fa';
@@ -91,10 +92,10 @@ const DashboardMain = () => {
       <div className="main-chart">
         <div className="mt-5 m-2 col-6 col-md-4" style={{ width: "50%" }}>
           <div >
-            <ChartBar />
+            <AppointmentOverview/>
           </div>
           <div>
-            <ChartBar />
+            <PatientOverView/>
           </div>
         </div>
         <div className="m-2 bg-lg shadow ps-5" style={{ maxWidth: "44%" }}>
