@@ -1,12 +1,12 @@
 import React from "react";
 import {
-    Box,
-    Grid,
-    Menu,
-    MenuItem,
-    Stack,
-    Typography,
-    Fade,
+  Box,
+  Grid,
+  Menu,
+  MenuItem,
+  Stack,
+  Typography,
+  Fade,
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "../addDoctor/AddDoctor.css"
@@ -14,67 +14,70 @@ import "../addDoctor/AddDoctor.css"
 import AddSchedule from "./AddSchedule";
 
 const AddDoctor = () => {
-    const array = [
-        {
-            id: "1",
-            name: "Ashish",
-            diagnostic: "diagnostic",
-            bloodGroup: "bloadgroup",
-            image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        },
-        {
-            id: "2",
-            name: "Ashish",
-            diagnostic: "diagnostic",
-            bloodGroup: "bloadgroup",
-            image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        },
-        {
-            id: "3",
-            name: "Ashish",
-            diagnostic: "diagnostic",
-            bloodGroup: "bloadgroup",
-            image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        },
-        {
-            id: "4",
-            name: "Ashish",
-            diagnostic: "diagnostic",
-            bloodGroup: "bloadgroup",
-            image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        },
-        // {
-        //     id: "5",
-        //     name: "Ashish",
-        //     diagnostic: "diagnostic",
-        //     bloodGroup: "bloadgroup",
-        //     image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        // },
-        // {
-        //     id: "6",
-        //     name: "Ashish",
-        //     diagnostic: "diagnostic",
-        //     bloodGroup: "bloadgroup",
-        //     image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        // },
-    ]
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-    return (
-        <>
-            <div className="main-addDoctor container ">
-                {array.map((elem) => {
-                    const { name, diagnostic, bloodGroup, image } = elem;
-                    return (
-                        <div>
-
-                            {/* <Box
+  const array = [
+    {
+      id: "1",
+      name: "Ashish",
+      diagnostic: "diagnostic",
+      bloodGroup: "bloadgroup",
+      image:
+        "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    },
+    {
+      id: "2",
+      name: "Ashish",
+      diagnostic: "diagnostic",
+      bloodGroup: "bloadgroup",
+      image:
+        "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    },
+    {
+      id: "3",
+      name: "Ashish",
+      diagnostic: "diagnostic",
+      bloodGroup: "bloadgroup",
+      image:
+        "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    },
+    {
+      id: "4",
+      name: "Ashish",
+      diagnostic: "diagnostic",
+      bloodGroup: "bloadgroup",
+      image:
+        "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    },
+    // {
+    //     id: "5",
+    //     name: "Ashish",
+    //     diagnostic: "diagnostic",
+    //     bloodGroup: "bloadgroup",
+    //     image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    // },
+    // {
+    //     id: "6",
+    //     name: "Ashish",
+    //     diagnostic: "diagnostic",
+    //     bloodGroup: "bloadgroup",
+    //     image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    // },
+  ];
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  return (
+    <>
+      <div className="main-addDoctor container ">
+        {array.map((elem, index) => {
+          const { name, diagnostic, bloodGroup, image } = elem;
+          return (
+            <div key={index + 7816878}>
+              {/* <Box
                             sx={{
                                 width: 304,
                                 height: 113,
@@ -229,10 +232,13 @@ const AddDoctor = () => {
                     )
                 })}
             </div>
-            <hr />
-            <AddSchedule />
-        </>
-    );
+          );
+        })}
+      </div>
+      <hr />
+      <AddSchedule />
+    </>
+  );
 };
 
 export default AddDoctor;
