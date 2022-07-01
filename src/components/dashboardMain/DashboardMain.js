@@ -7,28 +7,36 @@ import "../dashboardMain/DashboardMain.css";
 const DashboardMain = () => {
   let img = [
     {
-      img: "https://previews.123rf.com/images/bestvectorstock/bestvectorstock1808/bestvectorstock180813927/107223766-doctor-vector-icon-isolated-on-transparent-background-doctor-logo-concept.jpg",
+      img: "./images/Doctor logo.svg",
       title: "Total Doctors",
       amt: "3,243",
       spn: "12.5%",
+      color: "#0089FF",
+      background: "#0089FF"
     },
     {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Pke_otputm7YhK-7y8ACs3iCyppJNbDWXg&usqp=CAU",
-      title: "Total Doctors",
+      img: "./images/Patient logo.svg",
+      title: "Total Patient",
       amt: "3,243",
       spn: "12.5%",
+      color: "#FF748E",
+      background: "#FF748E"
     },
     {
-      img: "https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png",
-      title: "Total Doctors",
+      img: "./images/Clinic logo.svg",
+      title: "Total Clinic",
       amt: "3,243",
       spn: "12.5%",
+      color: "#40DB50",
+      background: "#40DB50"
     },
     {
-      img: "https://icon2.cleanpng.com/20180403/hce/kisspng-revenue-computer-icons-business-profit-sales-income-5ac3f349f3aaa4.1202206815227912419981.jpg",
-      title: "Total Doctors",
+      img: "./images/Revenue logo.svg",
+      title: "Total Revenue",
       amt: "3,243",
       spn: "12.5%",
+      color: "#FFCB0E",
+      background: "#FFCB0E"
     },
   ];
   return (
@@ -47,14 +55,14 @@ const DashboardMain = () => {
                       <i className="fas fa-shopping-cart"></i>
                     </div>
                     <div className="mb-4 d-flex justify-content-between">
-                      <h5 className="card-title mb-0">{data.title}</h5>
+                      <h5 className="card-title mb-0" style={{ color: data.color }}>{data.title}</h5>
                       <i>
                         <img src={data.img} className="imgdas" alt="data" />
                       </i>
                     </div>
                     <div className="row align-items-center mb-2 d-flex">
                       <div className="col-8">
-                        <h2 className="d-flex align-items-center mb-0">
+                        <h2 className="d-flex align-items-center mb-0" style={{ color: data.color }}>
                           {data.amt}
                         </h2>
                       </div>
@@ -74,7 +82,7 @@ const DashboardMain = () => {
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style={{ width: "25%" }}
+                        style={{ width: "25%", background: data.background }}
                       ></div>
                     </div>
                   </div>

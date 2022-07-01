@@ -255,11 +255,15 @@ const AdminProfile = () => {
                   </div>
                   {/* gender */}
                   <div className="mt-4 pt-2">
-                    <input
-                      className="btn btn-primary btn-lg"
-                      type="submit"
-                      value="Submit"
-                    />
+                    <button className="btn btn-primary" style={{
+                      display: "flex",
+                      width: 140,
+                      height: 31,
+                      background: "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+                      borderRadius: "64px",
+                      alignItems: "center",
+                      justifyContent: "center"
+                    }}> Submit</button>
                   </div>
                 </div>
               </div>

@@ -36,6 +36,7 @@ const Dashboard = () => {
           md={showSidebar ? 10 : 11.5}
           sm={12}
           xs={12}
+          style={{ overflow: "auto", height: "100vh" }}
         >
           <Middle />
         </Grid>

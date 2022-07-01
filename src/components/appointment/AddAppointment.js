@@ -164,11 +164,27 @@ const AddAppointment = () => {
                                         {/* gender */}
                                         <div className='d-flex justify-content-center'>
                                             <div class=" mt-4 pt-2 me-3">
-                                                <input class="btn btn-primary btn-lg" type="Reset" value="Reset" />
+                                                <button className="btn btn-primary" style={{
+                                                    display: "flex",
+                                                    width: 140,
+                                                    height: 31,
+                                                    background: "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+                                                    borderRadius: "64px",
+                                                    alignItems: "center",
+                                                    justifyContent: "center"
+                                                }}> Reset</button>
 
                                             </div>
                                             <div class=" mt-4 pt-2">
-                                                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                                                <button className="btn btn-primary" style={{
+                                                    display: "flex",
+                                                    width: 140,
+                                                    height: 31,
+                                                    background: "linear-gradient(94.43deg, #54E6D8 -14.68%, #3E4095 87%)",
+                                                    borderRadius: "64px",
+                                                    alignItems: "center",
+                                                    justifyContent: "center"
+                                                }}> Submit</button>
 
                                             </div>
                                         </div>
