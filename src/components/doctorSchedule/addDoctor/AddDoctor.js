@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "../addDoctor/AddDoctor.css"
+// import c from "../../clinics/singleClinic/SingleClinic.module.css";
 import AddSchedule from "./AddSchedule";
 
 const AddDoctor = () => {
@@ -204,7 +205,7 @@ const AddDoctor = () => {
                                             >
                                                 Blood Group: {bloodGroup}
                                             </Typography>
-                                            <MoreVertIcon fontSize="small" onClick={handleClick} className="threeDot" />
+                                            <MoreVertIcon fontSize="small" onClick={handleClick} className="threeDotx" />
                                             <Menu
                                                 id="fade-menu"
                                                 MenuListProps={{
@@ -214,7 +215,7 @@ const AddDoctor = () => {
                                                 open={open}
                                                 onClose={handleClose}
                                                 TransitionComponent={Fade}
-                                               
+
                                             >
                                                 <MenuItem onClick={handleClose}>Edit</MenuItem>
                                                 <MenuItem onClick={handleClose}>Delete</MenuItem>
